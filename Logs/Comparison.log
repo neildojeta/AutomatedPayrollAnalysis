@@ -1,0 +1,540 @@
+2025-01-26 22:32:28,412 - INFO - Starting main comparison process.
+2025-01-26 22:32:28,413 - INFO - Loading sheets from the provided Excel files.
+2025-01-26 22:32:28,882 - INFO - Sheets loaded successfully.
+2025-01-26 22:32:28,882 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:32:28,884 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:32:28,886 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:32:28,889 - INFO - Operator comparison completed.
+2025-01-26 22:32:28,891 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:32:28,899 - INFO - Trips and hours comparison completed.
+2025-01-26 22:32:28,988 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:32:28,991 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:32:28,991 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:32:28,993 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:32:28,993 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:32:29,000 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:32:29,001 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:32:29,009 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:32:29,064 - INFO - Calculating client totals for CCCTA.
+2025-01-26 22:32:29,065 - INFO - Calculating client totals for CCCTA.
+2025-01-26 22:32:29,066 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:32:29,068 - INFO - Operator comparison completed.
+2025-01-26 22:32:29,069 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:32:29,076 - INFO - Trips and hours comparison completed.
+2025-01-26 22:32:29,157 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:32:29,160 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:32:29,160 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:32:29,162 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:32:29,162 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:32:29,167 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:32:29,168 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:32:29,175 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:32:29,230 - INFO - Calculating client totals for LAVTA.
+2025-01-26 22:32:29,231 - INFO - Calculating client totals for LAVTA.
+2025-01-26 22:32:29,232 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:32:29,234 - INFO - Operator comparison completed.
+2025-01-26 22:32:29,235 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:32:29,242 - INFO - Trips and hours comparison completed.
+2025-01-26 22:32:29,318 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:32:29,322 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:32:29,322 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:32:29,325 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:32:29,325 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:32:29,329 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:32:29,329 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:32:29,334 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:32:29,386 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-26 22:35:10,532 - INFO - Starting main comparison process.
+2025-01-26 22:35:10,533 - INFO - Loading sheets from the provided Excel files.
+2025-01-26 22:35:10,991 - INFO - Sheets loaded successfully.
+2025-01-26 22:35:10,991 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:35:10,993 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:35:10,994 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:35:10,997 - INFO - Operator comparison completed.
+2025-01-26 22:35:10,999 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:35:11,005 - INFO - Trips and hours comparison completed.
+2025-01-26 22:35:11,006 - ERROR - Error in main comparison process: [Errno 13] Permission denied: 'ComparedResults\\Full_Comparison.xlsx'
+2025-01-26 22:37:58,749 - INFO - Starting main comparison process.
+2025-01-26 22:37:58,750 - INFO - Loading sheets from the provided Excel files.
+2025-01-26 22:37:59,216 - INFO - Sheets loaded successfully.
+2025-01-26 22:37:59,217 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:37:59,218 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:37:59,220 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:37:59,224 - INFO - Operator comparison completed.
+2025-01-26 22:37:59,227 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:37:59,235 - INFO - Trips and hours comparison completed.
+2025-01-26 22:37:59,236 - ERROR - Error in main comparison process: [Errno 13] Permission denied: 'ComparedResults\\Full_Comparison.xlsx'
+2025-01-26 22:39:24,893 - INFO - Starting main comparison process.
+2025-01-26 22:39:24,894 - INFO - Loading sheets from the provided Excel files.
+2025-01-26 22:39:25,374 - INFO - Sheets loaded successfully.
+2025-01-26 22:39:25,375 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:39:25,376 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:39:25,377 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:39:25,381 - INFO - Operator comparison completed.
+2025-01-26 22:39:25,384 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:39:25,391 - INFO - Trips and hours comparison completed.
+2025-01-26 22:39:25,463 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:39:25,467 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:39:25,467 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:39:25,469 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:39:25,469 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:39:25,477 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:39:25,477 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:39:25,486 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:39:25,520 - INFO - Calculating client totals for CCCTA.
+2025-01-26 22:39:25,521 - INFO - Calculating client totals for CCCTA.
+2025-01-26 22:39:25,522 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:39:25,525 - INFO - Operator comparison completed.
+2025-01-26 22:39:25,527 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:39:25,535 - INFO - Trips and hours comparison completed.
+2025-01-26 22:39:25,591 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:39:25,594 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:39:25,594 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:39:25,596 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:39:25,596 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:39:25,603 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:39:25,604 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:39:25,609 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:39:25,641 - INFO - Calculating client totals for LAVTA.
+2025-01-26 22:39:25,642 - INFO - Calculating client totals for LAVTA.
+2025-01-26 22:39:25,643 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:39:25,645 - INFO - Operator comparison completed.
+2025-01-26 22:39:25,647 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:39:25,654 - INFO - Trips and hours comparison completed.
+2025-01-26 22:39:25,715 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:39:25,718 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:39:25,718 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:39:25,720 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:39:25,721 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:39:25,724 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:39:25,725 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:39:25,731 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:39:25,769 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-26 22:39:43,172 - ERROR - Error in main comparison process: (-2147417848, 'The object invoked has disconnected from its clients.', None, None)
+2025-01-26 22:47:32,023 - INFO - Starting main comparison process.
+2025-01-26 22:47:32,024 - INFO - Loading sheets from the provided Excel files.
+2025-01-26 22:47:32,502 - INFO - Sheets loaded successfully.
+2025-01-26 22:47:32,502 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:47:32,503 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:47:32,504 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:47:32,508 - INFO - Operator comparison completed.
+2025-01-26 22:47:32,510 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:47:32,517 - INFO - Trips and hours comparison completed.
+2025-01-26 22:47:32,591 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:47:32,595 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:47:32,595 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:47:32,596 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:47:32,597 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:47:32,604 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:47:32,604 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:47:32,613 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:47:32,646 - INFO - Calculating client totals for CCCTA.
+2025-01-26 22:47:32,647 - INFO - Calculating client totals for CCCTA.
+2025-01-26 22:47:32,649 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:47:32,651 - INFO - Operator comparison completed.
+2025-01-26 22:47:32,653 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:47:32,658 - INFO - Trips and hours comparison completed.
+2025-01-26 22:47:32,716 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:47:32,719 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:47:32,719 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:47:32,721 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:47:32,722 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:47:32,728 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:47:32,728 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:47:32,734 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:47:32,765 - INFO - Calculating client totals for LAVTA.
+2025-01-26 22:47:32,766 - INFO - Calculating client totals for LAVTA.
+2025-01-26 22:47:32,767 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:47:32,770 - INFO - Operator comparison completed.
+2025-01-26 22:47:32,771 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:47:32,777 - INFO - Trips and hours comparison completed.
+2025-01-26 22:47:32,823 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:47:32,827 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:47:32,827 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:47:32,830 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:47:32,830 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:47:32,835 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:47:32,835 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:47:32,839 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:47:32,869 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-26 22:47:37,532 - ERROR - Error in main comparison process: (-2147417848, 'The object invoked has disconnected from its clients.', None, None)
+2025-01-26 22:50:35,889 - INFO - Starting main comparison process.
+2025-01-26 22:50:35,890 - INFO - Loading sheets from the provided Excel files.
+2025-01-26 22:50:36,374 - INFO - Sheets loaded successfully.
+2025-01-26 22:50:36,374 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:50:36,376 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:50:36,378 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:50:36,381 - INFO - Operator comparison completed.
+2025-01-26 22:50:36,383 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:50:36,390 - INFO - Trips and hours comparison completed.
+2025-01-26 22:50:36,463 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:50:36,467 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:50:36,467 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:50:36,469 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:50:36,469 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:50:36,479 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:50:36,479 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:50:36,486 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:50:36,519 - INFO - Calculating client totals for CCCTA.
+2025-01-26 22:50:36,520 - INFO - Calculating client totals for CCCTA.
+2025-01-26 22:50:36,521 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:50:36,524 - INFO - Operator comparison completed.
+2025-01-26 22:50:36,526 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:50:36,533 - INFO - Trips and hours comparison completed.
+2025-01-26 22:50:36,581 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:50:36,584 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:50:36,585 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:50:36,586 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:50:36,587 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:50:36,593 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:50:36,594 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:50:36,600 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:50:36,624 - INFO - Calculating client totals for LAVTA.
+2025-01-26 22:50:36,624 - INFO - Calculating client totals for LAVTA.
+2025-01-26 22:50:36,626 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:50:36,629 - INFO - Operator comparison completed.
+2025-01-26 22:50:36,631 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:50:36,637 - INFO - Trips and hours comparison completed.
+2025-01-26 22:50:36,681 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:50:36,684 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:50:36,684 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:50:36,687 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:50:36,687 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:50:36,691 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:50:36,692 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:50:36,697 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:50:36,724 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-26 22:52:04,201 - INFO - Starting main comparison process.
+2025-01-26 22:52:04,201 - INFO - Loading sheets from the provided Excel files.
+2025-01-26 22:52:04,677 - INFO - Sheets loaded successfully.
+2025-01-26 22:52:04,677 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:52:04,678 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-26 22:52:04,680 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:52:04,683 - INFO - Operator comparison completed.
+2025-01-26 22:52:04,686 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:52:04,693 - INFO - Trips and hours comparison completed.
+2025-01-26 22:52:04,764 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:52:04,767 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:52:04,768 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:52:04,769 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:52:04,769 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:52:04,777 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:52:04,777 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:52:04,785 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:52:04,818 - INFO - Calculating client totals for CCCTA.
+2025-01-26 22:52:04,818 - INFO - Calculating client totals for CCCTA.
+2025-01-26 22:52:04,819 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:52:04,822 - INFO - Operator comparison completed.
+2025-01-26 22:52:04,823 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:52:04,829 - INFO - Trips and hours comparison completed.
+2025-01-26 22:52:04,888 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:52:04,891 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:52:04,891 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:52:04,893 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:52:04,893 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:52:04,900 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:52:04,900 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:52:04,906 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:52:04,937 - INFO - Calculating client totals for LAVTA.
+2025-01-26 22:52:04,938 - INFO - Calculating client totals for LAVTA.
+2025-01-26 22:52:04,939 - INFO - Comparing operators between previous and latest sheets.
+2025-01-26 22:52:04,942 - INFO - Operator comparison completed.
+2025-01-26 22:52:04,943 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-26 22:52:04,950 - INFO - Trips and hours comparison completed.
+2025-01-26 22:52:05,042 - INFO - Applying formatting to sheet: Summary.
+2025-01-26 22:52:05,045 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-26 22:52:05,045 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-26 22:52:05,048 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-26 22:52:05,048 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-26 22:52:05,053 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-26 22:52:05,053 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-26 22:52:05,057 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-26 22:52:05,097 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-27 08:16:58,861 - INFO - Starting main comparison process.
+2025-01-27 08:16:58,932 - INFO - Loading sheets from the provided Excel files.
+2025-01-27 08:16:59,474 - INFO - Sheets loaded successfully.
+2025-01-27 08:16:59,474 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-27 08:16:59,480 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-27 08:16:59,482 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 08:16:59,488 - INFO - Operator comparison completed.
+2025-01-27 08:16:59,490 - INFO - Comparing dates between previous and latest sheets.
+2025-01-27 08:16:59,492 - INFO - Date comparison completed.
+2025-01-27 08:16:59,494 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 08:16:59,522 - INFO - Trips and hours comparison completed.
+2025-01-27 08:16:59,628 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 08:16:59,632 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 08:16:59,632 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 08:16:59,634 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 08:16:59,634 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 08:16:59,642 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 08:16:59,643 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 08:16:59,650 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 08:16:59,650 - INFO - Applying formatting to sheet: DateComparison.
+2025-01-27 08:16:59,656 - INFO - Formatting applied successfully to sheet: DateComparison.
+2025-01-27 08:16:59,725 - INFO - Calculating client totals for CCCTA.
+2025-01-27 08:16:59,726 - INFO - Calculating client totals for CCCTA.
+2025-01-27 08:16:59,727 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 08:16:59,730 - INFO - Operator comparison completed.
+2025-01-27 08:16:59,731 - INFO - Comparing dates between previous and latest sheets.
+2025-01-27 08:16:59,732 - INFO - Date comparison completed.
+2025-01-27 08:16:59,734 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 08:16:59,740 - INFO - Trips and hours comparison completed.
+2025-01-27 08:16:59,833 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 08:16:59,837 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 08:16:59,837 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 08:16:59,840 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 08:16:59,840 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 08:16:59,846 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 08:16:59,846 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 08:16:59,853 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 08:16:59,853 - INFO - Applying formatting to sheet: DateComparison.
+2025-01-27 08:16:59,859 - INFO - Formatting applied successfully to sheet: DateComparison.
+2025-01-27 08:16:59,918 - INFO - Calculating client totals for LAVTA.
+2025-01-27 08:16:59,919 - INFO - Calculating client totals for LAVTA.
+2025-01-27 08:16:59,920 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 08:16:59,923 - INFO - Operator comparison completed.
+2025-01-27 08:16:59,925 - INFO - Comparing dates between previous and latest sheets.
+2025-01-27 08:16:59,926 - INFO - Date comparison completed.
+2025-01-27 08:16:59,928 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 08:16:59,936 - INFO - Trips and hours comparison completed.
+2025-01-27 08:17:00,020 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 08:17:00,024 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 08:17:00,024 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 08:17:00,026 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 08:17:00,026 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 08:17:00,030 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 08:17:00,030 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 08:17:00,034 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 08:17:00,035 - INFO - Applying formatting to sheet: DateComparison.
+2025-01-27 08:17:00,040 - INFO - Formatting applied successfully to sheet: DateComparison.
+2025-01-27 08:17:00,097 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-27 08:32:22,690 - INFO - Starting main comparison process.
+2025-01-27 08:32:22,691 - INFO - Loading sheets from the provided Excel files.
+2025-01-27 08:32:23,134 - INFO - Sheets loaded successfully.
+2025-01-27 08:32:23,135 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-27 08:32:23,136 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-27 08:32:23,138 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 08:32:23,142 - INFO - Operator comparison completed.
+2025-01-27 08:32:23,144 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 08:32:23,150 - INFO - Trips and hours comparison completed.
+2025-01-27 08:32:23,223 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 08:32:23,226 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 08:32:23,226 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 08:32:23,227 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 08:32:23,227 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 08:32:23,237 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 08:32:23,237 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 08:32:23,245 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 08:32:23,302 - INFO - Calculating client totals for CCCTA.
+2025-01-27 08:32:23,303 - INFO - Calculating client totals for CCCTA.
+2025-01-27 08:32:23,304 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 08:32:23,306 - INFO - Operator comparison completed.
+2025-01-27 08:32:23,308 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 08:32:23,313 - INFO - Trips and hours comparison completed.
+2025-01-27 08:32:23,373 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 08:32:23,376 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 08:32:23,376 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 08:32:23,378 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 08:32:23,378 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 08:32:23,385 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 08:32:23,385 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 08:32:23,393 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 08:32:23,447 - INFO - Calculating client totals for LAVTA.
+2025-01-27 08:32:23,449 - INFO - Calculating client totals for LAVTA.
+2025-01-27 08:32:23,451 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 08:32:23,455 - INFO - Operator comparison completed.
+2025-01-27 08:32:23,456 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 08:32:23,464 - INFO - Trips and hours comparison completed.
+2025-01-27 08:32:23,518 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 08:32:23,521 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 08:32:23,521 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 08:32:23,523 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 08:32:23,523 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 08:32:23,527 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 08:32:23,527 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 08:32:23,531 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 08:32:23,594 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-27 08:34:20,275 - INFO - Starting main comparison process.
+2025-01-27 08:34:20,276 - INFO - Loading sheets from the provided Excel files.
+2025-01-27 08:34:20,729 - INFO - Sheets loaded successfully.
+2025-01-27 08:34:20,729 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-27 08:34:20,731 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-27 08:34:20,733 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 08:34:20,736 - INFO - Operator comparison completed.
+2025-01-27 08:34:20,739 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 08:34:20,745 - INFO - Trips and hours comparison completed.
+2025-01-27 08:34:20,817 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 08:34:20,821 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 08:34:20,821 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 08:34:20,822 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 08:34:20,822 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 08:34:20,830 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 08:34:20,830 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 08:34:20,838 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 08:34:20,878 - INFO - Calculating client totals for CCCTA.
+2025-01-27 08:34:20,879 - INFO - Calculating client totals for CCCTA.
+2025-01-27 08:34:20,880 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 08:34:20,884 - INFO - Operator comparison completed.
+2025-01-27 08:34:20,885 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 08:34:20,891 - INFO - Trips and hours comparison completed.
+2025-01-27 08:34:20,937 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 08:34:20,940 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 08:34:20,940 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 08:34:20,942 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 08:34:20,942 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 08:34:20,948 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 08:34:20,948 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 08:34:20,955 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 08:34:20,976 - INFO - Calculating client totals for LAVTA.
+2025-01-27 08:34:20,977 - INFO - Calculating client totals for LAVTA.
+2025-01-27 08:34:20,978 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 08:34:20,981 - INFO - Operator comparison completed.
+2025-01-27 08:34:20,983 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 08:34:20,990 - INFO - Trips and hours comparison completed.
+2025-01-27 08:34:21,036 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 08:34:21,039 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 08:34:21,040 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 08:34:21,042 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 08:34:21,042 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 08:34:21,046 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 08:34:21,046 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 08:34:21,051 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 08:34:21,081 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-27 08:35:05,059 - INFO - Starting main comparison process.
+2025-01-27 08:35:05,060 - INFO - Loading sheets from the provided Excel files.
+2025-01-27 08:35:05,503 - INFO - Sheets loaded successfully.
+2025-01-27 08:35:05,504 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-27 08:35:05,506 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-27 08:35:05,507 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 08:35:05,511 - INFO - Operator comparison completed.
+2025-01-27 08:35:05,514 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 08:35:05,521 - INFO - Trips and hours comparison completed.
+2025-01-27 08:35:05,596 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 08:35:05,599 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 08:35:05,599 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 08:35:05,601 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 08:35:05,601 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 08:35:05,608 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 08:35:05,608 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 08:35:05,617 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 08:35:05,650 - INFO - Calculating client totals for CCCTA.
+2025-01-27 08:35:05,651 - INFO - Calculating client totals for CCCTA.
+2025-01-27 08:35:05,652 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 08:35:05,654 - INFO - Operator comparison completed.
+2025-01-27 08:35:05,655 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 08:35:05,662 - INFO - Trips and hours comparison completed.
+2025-01-27 08:35:05,706 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 08:35:05,711 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 08:35:05,711 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 08:35:05,713 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 08:35:05,713 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 08:35:05,719 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 08:35:05,719 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 08:35:05,726 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 08:35:05,756 - INFO - Calculating client totals for LAVTA.
+2025-01-27 08:35:05,757 - INFO - Calculating client totals for LAVTA.
+2025-01-27 08:35:05,758 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 08:35:05,762 - INFO - Operator comparison completed.
+2025-01-27 08:35:05,763 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 08:35:05,769 - INFO - Trips and hours comparison completed.
+2025-01-27 08:35:05,814 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 08:35:05,817 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 08:35:05,817 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 08:35:05,820 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 08:35:05,820 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 08:35:05,824 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 08:35:05,825 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 08:35:05,829 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 08:35:05,861 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-27 09:07:06,636 - INFO - Starting main comparison process.
+2025-01-27 09:07:06,636 - INFO - Loading sheets from the provided Excel files.
+2025-01-27 09:07:07,084 - INFO - Sheets loaded successfully.
+2025-01-27 09:07:07,085 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-27 09:07:07,086 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-27 09:07:07,088 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 09:07:07,091 - INFO - Operator comparison completed.
+2025-01-27 09:07:07,093 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 09:07:07,102 - INFO - Trips and hours comparison completed.
+2025-01-27 09:07:07,184 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 09:07:07,187 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 09:07:07,187 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 09:07:07,188 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 09:07:07,189 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 09:07:07,197 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 09:07:07,198 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 09:07:07,205 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 09:07:07,238 - INFO - Calculating client totals for CCCTA.
+2025-01-27 09:07:07,239 - INFO - Calculating client totals for CCCTA.
+2025-01-27 09:07:07,241 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 09:07:07,243 - INFO - Operator comparison completed.
+2025-01-27 09:07:07,245 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 09:07:07,250 - INFO - Trips and hours comparison completed.
+2025-01-27 09:07:07,303 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 09:07:07,308 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 09:07:07,308 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 09:07:07,310 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 09:07:07,310 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 09:07:07,316 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 09:07:07,317 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 09:07:07,323 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 09:07:07,353 - INFO - Calculating client totals for LAVTA.
+2025-01-27 09:07:07,355 - INFO - Calculating client totals for LAVTA.
+2025-01-27 09:07:07,356 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 09:07:07,359 - INFO - Operator comparison completed.
+2025-01-27 09:07:07,360 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 09:07:07,366 - INFO - Trips and hours comparison completed.
+2025-01-27 09:07:07,419 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 09:07:07,424 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 09:07:07,424 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 09:07:07,426 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 09:07:07,427 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 09:07:07,431 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 09:07:07,431 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 09:07:07,435 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 09:07:07,477 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-27 09:07:56,213 - INFO - Starting main comparison process.
+2025-01-27 09:07:56,213 - INFO - Loading sheets from the provided Excel files.
+2025-01-27 09:07:56,669 - INFO - Sheets loaded successfully.
+2025-01-27 09:07:56,670 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-27 09:07:56,671 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-27 09:07:56,673 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 09:07:56,677 - INFO - Operator comparison completed.
+2025-01-27 09:07:56,680 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 09:07:56,689 - INFO - Trips and hours comparison completed.
+2025-01-27 09:07:56,762 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 09:07:56,766 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 09:07:56,766 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 09:07:56,768 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 09:07:56,768 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 09:07:56,776 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 09:07:56,776 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 09:07:56,784 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 09:07:56,817 - INFO - Calculating client totals for CCCTA.
+2025-01-27 09:07:56,818 - INFO - Calculating client totals for CCCTA.
+2025-01-27 09:07:56,819 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 09:07:56,822 - INFO - Operator comparison completed.
+2025-01-27 09:07:56,824 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 09:07:56,829 - INFO - Trips and hours comparison completed.
+2025-01-27 09:07:56,881 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 09:07:56,884 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 09:07:56,884 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 09:07:56,888 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 09:07:56,888 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 09:07:56,894 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 09:07:56,894 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 09:07:56,902 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 09:07:56,934 - INFO - Calculating client totals for LAVTA.
+2025-01-27 09:07:56,935 - INFO - Calculating client totals for LAVTA.
+2025-01-27 09:07:56,936 - INFO - Comparing operators between previous and latest sheets.
+2025-01-27 09:07:56,939 - INFO - Operator comparison completed.
+2025-01-27 09:07:56,941 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-27 09:07:56,946 - INFO - Trips and hours comparison completed.
+2025-01-27 09:07:56,999 - INFO - Applying formatting to sheet: Summary.
+2025-01-27 09:07:57,003 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-27 09:07:57,003 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-27 09:07:57,006 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-27 09:07:57,007 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-27 09:07:57,012 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-27 09:07:57,012 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-27 09:07:57,016 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-27 09:07:57,058 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
