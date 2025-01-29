@@ -538,3 +538,523 @@
 2025-01-27 09:07:57,012 - INFO - Applying formatting to sheet: HoursComparison.
 2025-01-27 09:07:57,016 - INFO - Formatting applied successfully to sheet: HoursComparison.
 2025-01-27 09:07:57,058 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-29 07:55:31,947 - INFO - Starting main comparison process.
+2025-01-29 07:55:31,947 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 07:55:32,403 - INFO - Sheets loaded successfully.
+2025-01-29 07:55:32,403 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 07:55:32,412 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 07:55:32,413 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 07:55:32,420 - INFO - Operator comparison completed.
+2025-01-29 07:55:32,423 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 07:55:32,438 - INFO - Trips and hours comparison completed.
+2025-01-29 07:55:32,438 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 07:55:32,438 - ERROR - Error comparing deductions: 'PARTNER'
+2025-01-29 07:55:32,438 - ERROR - Error in main comparison process: 'PARTNER'
+2025-01-29 08:02:47,085 - INFO - Starting main comparison process.
+2025-01-29 08:02:47,086 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 08:02:47,523 - INFO - Sheets loaded successfully.
+2025-01-29 08:02:47,524 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:02:47,525 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:02:47,527 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 08:02:47,530 - INFO - Operator comparison completed.
+2025-01-29 08:02:47,532 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 08:02:47,537 - INFO - Trips and hours comparison completed.
+2025-01-29 08:02:47,538 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 08:02:47,538 - ERROR - Error comparing deductions: 'Operator'
+2025-01-29 08:02:47,538 - ERROR - Error in main comparison process: 'Operator'
+2025-01-29 08:31:33,862 - INFO - Starting main comparison process.
+2025-01-29 08:31:33,863 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 08:31:34,453 - INFO - Sheets loaded successfully.
+2025-01-29 08:31:34,454 - ERROR - Error in main comparison process: not enough values to unpack (expected 6, got 4)
+2025-01-29 08:34:37,744 - INFO - Starting main comparison process.
+2025-01-29 08:34:37,745 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 08:34:38,330 - INFO - Sheets loaded successfully.
+2025-01-29 08:34:38,331 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:34:38,332 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:34:38,334 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 08:34:38,337 - INFO - Operator comparison completed.
+2025-01-29 08:34:38,340 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 08:34:38,348 - INFO - Trips and hours comparison completed.
+2025-01-29 08:34:38,348 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 08:34:38,349 - ERROR - Error comparing deductions: 'Operator'
+2025-01-29 08:34:38,350 - ERROR - Error in main comparison process: 'Operator'
+2025-01-29 08:48:49,227 - INFO - Starting main comparison process.
+2025-01-29 08:48:49,228 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 08:48:49,836 - INFO - Sheets loaded successfully.
+2025-01-29 08:48:49,836 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:48:49,838 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:48:49,840 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 08:48:49,844 - INFO - Operator comparison completed.
+2025-01-29 08:48:49,846 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 08:48:49,875 - INFO - Trips and hours comparison completed.
+2025-01-29 08:48:49,880 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 08:48:49,926 - ERROR - Error comparing deductions: 'Lift Lease_LATEST'
+2025-01-29 08:48:49,926 - ERROR - Error in main comparison process: 'Lift Lease_LATEST'
+2025-01-29 08:53:01,605 - INFO - Starting main comparison process.
+2025-01-29 08:53:01,606 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 08:53:02,192 - INFO - Sheets loaded successfully.
+2025-01-29 08:53:02,193 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:53:02,194 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:53:02,196 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 08:53:02,201 - INFO - Operator comparison completed.
+2025-01-29 08:53:02,203 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 08:53:02,209 - INFO - Trips and hours comparison completed.
+2025-01-29 08:53:02,209 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 08:53:02,211 - ERROR - Error comparing deductions: 'DataFrameGroupBy' object has no attribute 'join'
+2025-01-29 08:53:02,211 - ERROR - Error in main comparison process: 'DataFrameGroupBy' object has no attribute 'join'
+2025-01-29 08:56:18,998 - INFO - Starting main comparison process.
+2025-01-29 08:56:18,998 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 08:56:19,600 - INFO - Sheets loaded successfully.
+2025-01-29 08:56:19,600 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:56:19,602 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:56:19,603 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 08:56:19,606 - INFO - Operator comparison completed.
+2025-01-29 08:56:19,609 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 08:56:19,617 - INFO - Trips and hours comparison completed.
+2025-01-29 08:56:19,618 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 08:56:19,629 - ERROR - Error comparing deductions: 'PARTNER'
+2025-01-29 08:56:19,629 - ERROR - Error in main comparison process: 'PARTNER'
+2025-01-29 08:57:13,238 - INFO - Starting main comparison process.
+2025-01-29 08:57:13,239 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 08:57:13,837 - INFO - Sheets loaded successfully.
+2025-01-29 08:57:13,855 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:57:13,856 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:57:13,858 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 08:57:13,861 - INFO - Operator comparison completed.
+2025-01-29 08:57:13,863 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 08:57:13,872 - INFO - Trips and hours comparison completed.
+2025-01-29 08:57:13,873 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 08:57:13,879 - ERROR - Error comparing deductions: 'PARTNER'
+2025-01-29 08:57:13,880 - ERROR - Error in main comparison process: 'PARTNER'
+2025-01-29 08:59:14,910 - INFO - Starting main comparison process.
+2025-01-29 08:59:14,911 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 08:59:15,504 - INFO - Sheets loaded successfully.
+2025-01-29 08:59:15,505 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:59:15,506 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 08:59:15,508 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 08:59:15,511 - INFO - Operator comparison completed.
+2025-01-29 08:59:15,513 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 08:59:15,520 - INFO - Trips and hours comparison completed.
+2025-01-29 08:59:15,521 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 08:59:15,522 - ERROR - Error comparing deductions: 'DataFrameGroupBy' object has no attribute 'join'
+2025-01-29 08:59:15,523 - ERROR - Error in main comparison process: 'DataFrameGroupBy' object has no attribute 'join'
+2025-01-29 09:03:09,104 - INFO - Starting main comparison process.
+2025-01-29 09:03:09,104 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 09:03:09,694 - INFO - Sheets loaded successfully.
+2025-01-29 09:03:09,695 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:03:09,696 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:03:09,697 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:03:09,701 - INFO - Operator comparison completed.
+2025-01-29 09:03:09,703 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:03:09,711 - INFO - Trips and hours comparison completed.
+2025-01-29 09:03:09,712 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:03:09,756 - INFO - Deductions comparison completed.
+2025-01-29 09:03:09,869 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:03:09,872 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:03:09,872 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:03:09,874 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:03:09,874 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:03:09,882 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:03:09,882 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:03:09,891 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:03:09,891 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:03:09,899 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:03:09,968 - INFO - Calculating client totals for CCCTA.
+2025-01-29 09:03:09,969 - INFO - Calculating client totals for CCCTA.
+2025-01-29 09:03:09,970 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:03:09,973 - INFO - Operator comparison completed.
+2025-01-29 09:03:09,974 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:03:09,979 - INFO - Trips and hours comparison completed.
+2025-01-29 09:03:09,980 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:03:09,984 - INFO - Deductions comparison completed.
+2025-01-29 09:03:10,069 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:03:10,073 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:03:10,073 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:03:10,075 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:03:10,075 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:03:10,081 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:03:10,081 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:03:10,087 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:03:10,088 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:03:10,095 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:03:10,156 - INFO - Calculating client totals for LAVTA.
+2025-01-29 09:03:10,158 - INFO - Calculating client totals for LAVTA.
+2025-01-29 09:03:10,159 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:03:10,161 - INFO - Operator comparison completed.
+2025-01-29 09:03:10,163 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:03:10,170 - INFO - Trips and hours comparison completed.
+2025-01-29 09:03:10,170 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:03:10,173 - INFO - Deductions comparison completed.
+2025-01-29 09:03:10,256 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:03:10,261 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:03:10,261 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:03:10,264 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:03:10,264 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:03:10,269 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:03:10,269 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:03:10,273 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:03:10,274 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:03:10,280 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:03:10,339 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-29 09:09:15,529 - INFO - Starting main comparison process.
+2025-01-29 09:09:15,530 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 09:09:16,163 - INFO - Sheets loaded successfully.
+2025-01-29 09:09:16,163 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:09:16,164 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:09:16,166 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:09:16,169 - INFO - Operator comparison completed.
+2025-01-29 09:09:16,171 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:09:16,180 - INFO - Trips and hours comparison completed.
+2025-01-29 09:09:16,180 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:09:16,185 - ERROR - Error comparing deductions: "['PREVIOUS', 'LATEST'] not in index"
+2025-01-29 09:09:16,185 - ERROR - Error in main comparison process: "['PREVIOUS', 'LATEST'] not in index"
+2025-01-29 09:12:14,058 - INFO - Starting main comparison process.
+2025-01-29 09:12:14,059 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 09:12:14,644 - INFO - Sheets loaded successfully.
+2025-01-29 09:12:14,644 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:12:14,646 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:12:14,647 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:12:14,651 - INFO - Operator comparison completed.
+2025-01-29 09:12:14,654 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:12:14,661 - INFO - Trips and hours comparison completed.
+2025-01-29 09:12:14,662 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:12:14,666 - ERROR - Error comparing deductions: Length mismatch: Expected axis has 3 elements, new values have 4 elements
+2025-01-29 09:12:14,666 - ERROR - Error in main comparison process: Length mismatch: Expected axis has 3 elements, new values have 4 elements
+2025-01-29 09:12:48,330 - INFO - Starting main comparison process.
+2025-01-29 09:12:48,330 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 09:12:48,919 - INFO - Sheets loaded successfully.
+2025-01-29 09:12:48,920 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:12:48,922 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:12:48,924 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:12:48,928 - INFO - Operator comparison completed.
+2025-01-29 09:12:48,929 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:12:48,936 - INFO - Trips and hours comparison completed.
+2025-01-29 09:12:48,936 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:12:48,942 - INFO - Deductions comparison completed.
+2025-01-29 09:12:49,013 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:12:49,017 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:12:49,017 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:12:49,019 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:12:49,020 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:12:49,029 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:12:49,030 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:12:49,038 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:12:49,039 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:12:49,045 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:12:49,083 - INFO - Calculating client totals for CCCTA.
+2025-01-29 09:12:49,084 - INFO - Calculating client totals for CCCTA.
+2025-01-29 09:12:49,085 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:12:49,087 - INFO - Operator comparison completed.
+2025-01-29 09:12:49,089 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:12:49,095 - INFO - Trips and hours comparison completed.
+2025-01-29 09:12:49,095 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:12:49,099 - INFO - Deductions comparison completed.
+2025-01-29 09:12:49,177 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:12:49,180 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:12:49,181 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:12:49,182 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:12:49,183 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:12:49,190 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:12:49,190 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:12:49,196 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:12:49,196 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:12:49,200 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:12:49,250 - INFO - Calculating client totals for LAVTA.
+2025-01-29 09:12:49,251 - INFO - Calculating client totals for LAVTA.
+2025-01-29 09:12:49,252 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:12:49,254 - INFO - Operator comparison completed.
+2025-01-29 09:12:49,256 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:12:49,262 - INFO - Trips and hours comparison completed.
+2025-01-29 09:12:49,263 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:12:49,266 - INFO - Deductions comparison completed.
+2025-01-29 09:12:49,332 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:12:49,335 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:12:49,335 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:12:49,338 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:12:49,338 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:12:49,342 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:12:49,343 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:12:49,347 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:12:49,347 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:12:49,350 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:12:49,389 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-29 09:14:41,859 - INFO - Starting main comparison process.
+2025-01-29 09:14:41,860 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 09:14:42,461 - INFO - Sheets loaded successfully.
+2025-01-29 09:14:42,461 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:14:42,463 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:14:42,464 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:14:42,468 - INFO - Operator comparison completed.
+2025-01-29 09:14:42,470 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:14:42,476 - INFO - Trips and hours comparison completed.
+2025-01-29 09:14:42,477 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:14:42,483 - ERROR - Error comparing deductions: Length mismatch: Expected axis has 5 elements, new values have 4 elements
+2025-01-29 09:14:42,484 - ERROR - Error in main comparison process: Length mismatch: Expected axis has 5 elements, new values have 4 elements
+2025-01-29 09:18:03,323 - INFO - Starting main comparison process.
+2025-01-29 09:18:03,324 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 09:18:03,939 - INFO - Sheets loaded successfully.
+2025-01-29 09:18:03,939 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:18:03,941 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:18:03,943 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:18:03,947 - INFO - Operator comparison completed.
+2025-01-29 09:18:03,949 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:18:03,955 - INFO - Trips and hours comparison completed.
+2025-01-29 09:18:03,956 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:18:03,961 - ERROR - Error comparing deductions: Length mismatch: Expected axis has 3 elements, new values have 4 elements
+2025-01-29 09:18:03,961 - ERROR - Error in main comparison process: Length mismatch: Expected axis has 3 elements, new values have 4 elements
+2025-01-29 09:19:23,276 - INFO - Starting main comparison process.
+2025-01-29 09:19:23,277 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 09:19:23,895 - INFO - Sheets loaded successfully.
+2025-01-29 09:19:23,895 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:19:23,897 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:19:23,898 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:19:23,901 - INFO - Operator comparison completed.
+2025-01-29 09:19:23,903 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:19:23,909 - INFO - Trips and hours comparison completed.
+2025-01-29 09:19:23,910 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:19:23,915 - INFO - Deductions comparison completed.
+2025-01-29 09:19:23,984 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:19:23,988 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:19:23,988 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:19:23,990 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:19:23,990 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:19:23,999 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:19:23,999 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:19:24,008 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:19:24,008 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:19:24,014 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:19:24,059 - INFO - Calculating client totals for CCCTA.
+2025-01-29 09:19:24,060 - INFO - Calculating client totals for CCCTA.
+2025-01-29 09:19:24,062 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:19:24,064 - INFO - Operator comparison completed.
+2025-01-29 09:19:24,066 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:19:24,071 - INFO - Trips and hours comparison completed.
+2025-01-29 09:19:24,071 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:19:24,075 - INFO - Deductions comparison completed.
+2025-01-29 09:19:24,141 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:19:24,145 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:19:24,146 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:19:24,148 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:19:24,148 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:19:24,154 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:19:24,154 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:19:24,160 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:19:24,161 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:19:24,166 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:19:24,218 - INFO - Calculating client totals for LAVTA.
+2025-01-29 09:19:24,219 - INFO - Calculating client totals for LAVTA.
+2025-01-29 09:19:24,220 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:19:24,222 - INFO - Operator comparison completed.
+2025-01-29 09:19:24,224 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:19:24,232 - INFO - Trips and hours comparison completed.
+2025-01-29 09:19:24,232 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:19:24,236 - INFO - Deductions comparison completed.
+2025-01-29 09:19:24,303 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:19:24,305 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:19:24,306 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:19:24,308 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:19:24,308 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:19:24,313 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:19:24,313 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:19:24,317 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:19:24,318 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:19:24,320 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:19:24,371 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-29 09:27:07,566 - INFO - Starting main comparison process.
+2025-01-29 09:27:07,567 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 09:27:08,171 - INFO - Sheets loaded successfully.
+2025-01-29 09:27:08,171 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:27:08,173 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:27:08,174 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:27:08,177 - INFO - Operator comparison completed.
+2025-01-29 09:27:08,179 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:27:08,186 - INFO - Trips and hours comparison completed.
+2025-01-29 09:27:08,187 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:27:08,188 - ERROR - Error comparing deductions: 'DataFrameGroupBy' object has no attribute 'merge'
+2025-01-29 09:27:08,189 - ERROR - Error in main comparison process: 'DataFrameGroupBy' object has no attribute 'merge'
+2025-01-29 09:27:39,686 - INFO - Starting main comparison process.
+2025-01-29 09:27:39,687 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 09:27:40,265 - INFO - Sheets loaded successfully.
+2025-01-29 09:27:40,265 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:27:40,267 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:27:40,269 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:27:40,273 - INFO - Operator comparison completed.
+2025-01-29 09:27:40,276 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:27:40,283 - INFO - Trips and hours comparison completed.
+2025-01-29 09:27:40,283 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:27:40,285 - ERROR - Error comparing deductions: 'DataFrameGroupBy' object has no attribute 'join'
+2025-01-29 09:27:40,285 - ERROR - Error in main comparison process: 'DataFrameGroupBy' object has no attribute 'join'
+2025-01-29 09:33:10,655 - INFO - Starting main comparison process.
+2025-01-29 09:33:10,656 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 09:33:11,243 - INFO - Sheets loaded successfully.
+2025-01-29 09:33:11,244 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:33:11,246 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:33:11,248 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:33:11,251 - INFO - Operator comparison completed.
+2025-01-29 09:33:11,253 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:33:11,259 - INFO - Trips and hours comparison completed.
+2025-01-29 09:33:11,260 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:33:11,306 - INFO - Deductions comparison completed.
+2025-01-29 09:33:11,381 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:33:11,384 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:33:11,385 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:33:11,386 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:33:11,386 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:33:11,394 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:33:11,394 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:33:11,402 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:33:11,403 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:33:11,409 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:33:11,453 - INFO - Calculating client totals for CCCTA.
+2025-01-29 09:33:11,454 - INFO - Calculating client totals for CCCTA.
+2025-01-29 09:33:11,456 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:33:11,458 - INFO - Operator comparison completed.
+2025-01-29 09:33:11,459 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:33:11,466 - INFO - Trips and hours comparison completed.
+2025-01-29 09:33:11,466 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:33:11,470 - INFO - Deductions comparison completed.
+2025-01-29 09:33:11,523 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:33:11,526 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:33:11,527 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:33:11,530 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:33:11,530 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:33:11,536 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:33:11,536 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:33:11,542 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:33:11,542 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:33:11,547 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:33:11,583 - INFO - Calculating client totals for LAVTA.
+2025-01-29 09:33:11,584 - INFO - Calculating client totals for LAVTA.
+2025-01-29 09:33:11,586 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:33:11,588 - INFO - Operator comparison completed.
+2025-01-29 09:33:11,589 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:33:11,596 - INFO - Trips and hours comparison completed.
+2025-01-29 09:33:11,596 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:33:11,600 - INFO - Deductions comparison completed.
+2025-01-29 09:33:11,667 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:33:11,670 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:33:11,670 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:33:11,672 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:33:11,673 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:33:11,677 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:33:11,677 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:33:11,682 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:33:11,682 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:33:11,684 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:33:11,724 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-29 09:33:39,128 - INFO - Starting main comparison process.
+2025-01-29 09:33:39,129 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 09:33:39,728 - INFO - Sheets loaded successfully.
+2025-01-29 09:33:39,728 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:33:39,729 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 09:33:39,731 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:33:39,734 - INFO - Operator comparison completed.
+2025-01-29 09:33:39,736 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:33:39,744 - INFO - Trips and hours comparison completed.
+2025-01-29 09:33:39,745 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:33:39,750 - INFO - Deductions comparison completed.
+2025-01-29 09:33:39,811 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:33:39,814 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:33:39,814 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:33:39,816 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:33:39,816 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:33:39,826 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:33:39,826 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:33:39,834 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:33:39,834 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:33:39,841 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:33:39,878 - INFO - Calculating client totals for CCCTA.
+2025-01-29 09:33:39,879 - INFO - Calculating client totals for CCCTA.
+2025-01-29 09:33:39,880 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:33:39,882 - INFO - Operator comparison completed.
+2025-01-29 09:33:39,884 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:33:39,892 - INFO - Trips and hours comparison completed.
+2025-01-29 09:33:39,892 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:33:39,896 - INFO - Deductions comparison completed.
+2025-01-29 09:33:39,947 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:33:39,950 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:33:39,951 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:33:39,953 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:33:39,954 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:33:39,960 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:33:39,961 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:33:39,966 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:33:39,967 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:33:39,971 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:33:40,046 - INFO - Calculating client totals for LAVTA.
+2025-01-29 09:33:40,047 - INFO - Calculating client totals for LAVTA.
+2025-01-29 09:33:40,048 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 09:33:40,051 - INFO - Operator comparison completed.
+2025-01-29 09:33:40,052 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 09:33:40,059 - INFO - Trips and hours comparison completed.
+2025-01-29 09:33:40,060 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 09:33:40,063 - INFO - Deductions comparison completed.
+2025-01-29 09:33:40,129 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 09:33:40,132 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 09:33:40,133 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 09:33:40,136 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 09:33:40,136 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 09:33:40,140 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 09:33:40,141 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 09:33:40,145 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 09:33:40,145 - INFO - Applying formatting to sheet: DeductionsComparison.
+2025-01-29 09:33:40,148 - INFO - Formatting applied successfully to sheet: DeductionsComparison.
+2025-01-29 09:33:40,178 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-01-29 10:15:33,371 - INFO - Starting main comparison process.
+2025-01-29 10:15:33,372 - INFO - Loading sheets from the provided Excel files.
+2025-01-29 10:15:33,959 - INFO - Sheets loaded successfully.
+2025-01-29 10:15:33,959 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 10:15:33,960 - INFO - Calculating totals for trips, hours, operators, and amounts.
+2025-01-29 10:15:33,962 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 10:15:33,966 - INFO - Operator comparison completed.
+2025-01-29 10:15:33,967 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 10:15:33,976 - INFO - Trips and hours comparison completed.
+2025-01-29 10:15:33,976 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 10:15:33,980 - INFO - Deductions comparison completed.
+2025-01-29 10:15:34,043 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 10:15:34,047 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 10:15:34,047 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 10:15:34,049 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 10:15:34,049 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 10:15:34,057 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 10:15:34,058 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 10:15:34,066 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 10:15:34,066 - INFO - Applying formatting to sheet: LeaseComparison.
+2025-01-29 10:15:34,073 - INFO - Formatting applied successfully to sheet: LeaseComparison.
+2025-01-29 10:15:34,127 - INFO - Calculating client totals for CCCTA.
+2025-01-29 10:15:34,128 - INFO - Calculating client totals for CCCTA.
+2025-01-29 10:15:34,129 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 10:15:34,131 - INFO - Operator comparison completed.
+2025-01-29 10:15:34,133 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 10:15:34,139 - INFO - Trips and hours comparison completed.
+2025-01-29 10:15:34,139 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 10:15:34,143 - INFO - Deductions comparison completed.
+2025-01-29 10:15:34,203 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 10:15:34,206 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 10:15:34,206 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 10:15:34,208 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 10:15:34,208 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 10:15:34,215 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 10:15:34,215 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 10:15:34,223 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 10:15:34,223 - INFO - Applying formatting to sheet: LeaseComparison.
+2025-01-29 10:15:34,227 - INFO - Formatting applied successfully to sheet: LeaseComparison.
+2025-01-29 10:15:34,269 - INFO - Calculating client totals for LAVTA.
+2025-01-29 10:15:34,270 - INFO - Calculating client totals for LAVTA.
+2025-01-29 10:15:34,272 - INFO - Comparing operators between previous and latest sheets.
+2025-01-29 10:15:34,274 - INFO - Operator comparison completed.
+2025-01-29 10:15:34,276 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-01-29 10:15:34,281 - INFO - Trips and hours comparison completed.
+2025-01-29 10:15:34,282 - INFO - Comparing Deductions between previous and latest sheets.
+2025-01-29 10:15:34,286 - INFO - Deductions comparison completed.
+2025-01-29 10:15:34,351 - INFO - Applying formatting to sheet: Summary.
+2025-01-29 10:15:34,355 - INFO - Formatting applied successfully to sheet: Summary.
+2025-01-29 10:15:34,355 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-01-29 10:15:34,357 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-01-29 10:15:34,358 - INFO - Applying formatting to sheet: TripsComparison.
+2025-01-29 10:15:34,361 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-01-29 10:15:34,362 - INFO - Applying formatting to sheet: HoursComparison.
+2025-01-29 10:15:34,366 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-01-29 10:15:34,366 - INFO - Applying formatting to sheet: LeaseComparison.
+2025-01-29 10:15:34,369 - INFO - Formatting applied successfully to sheet: LeaseComparison.
+2025-01-29 10:15:34,410 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.

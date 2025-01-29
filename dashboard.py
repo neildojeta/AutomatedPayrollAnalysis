@@ -160,7 +160,8 @@ def paste_picture():
     target_cells = {
         'TripsComparison': (11, 21),
         'HoursComparison': (44, 4),
-        'OperatorChanges': (44, 16)
+        'OperatorChanges': (44, 16),
+        'LeaseComparison': (44, 26)
     }
 
     relative_dashboard_path = "ComparedResults\\Dashboard.xlsm"
@@ -189,7 +190,7 @@ def paste_picture():
         # Delete existing pictures if they exist
         for target_sheet_name in ['Dashboard', 'CCCTA', 'LAVTA']:
             ws_dashboard = wb_dashboard.Sheets(target_sheet_name)
-            for picture_name in ['TripsTable', 'HoursTable', 'OperatorTable']:
+            for picture_name in ['TripsTable', 'HoursTable', 'OperatorTable, LeaseTable']:
                 try:
                     ws_dashboard.Shapes(picture_name).Delete()  # Attempt to delete the picture
                     print(f"Deleted existing picture: {picture_name} in {target_sheet_name}")
@@ -250,6 +251,8 @@ def paste_picture():
                     pasted_picture.Name = 'HoursTable'
                 elif sheet_name == 'OperatorChanges':
                     pasted_picture.Name = 'OperatorTable'
+                elif sheet_name == 'LeaseComparison':
+                    pasted_picture.Name = 'LeaseTable'
 
             # Close the comparison workbook without saving
             wb_comparison.Close(SaveChanges=True)

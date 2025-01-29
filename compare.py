@@ -31,8 +31,10 @@ def load_sheets(file_previous, file_latest):
         sheet_pr_latest = pd.read_excel(file_latest, sheet_name="PR DATE")
         sheet_hours_previous = pd.read_excel(file_previous, sheet_name="Hours_Working")
         sheet_hours_latest = pd.read_excel(file_latest, sheet_name="Hours_Working")
+        sheet_lease_previous = pd.read_excel(file_previous, sheet_name="Deductions")
+        sheet_lease_latest = pd.read_excel(file_latest, sheet_name="Deductions")
         logger.info("Sheets loaded successfully.")
-        return sheet_pr_previous, sheet_pr_latest, sheet_hours_previous, sheet_hours_latest
+        return sheet_pr_previous, sheet_pr_latest, sheet_hours_previous, sheet_hours_latest, sheet_lease_previous, sheet_lease_latest
     except Exception as e:
         logger.error(f"Error loading sheets: {e}")
         raise
@@ -146,6 +148,33 @@ def compare_trips_and_hours(sheet_previous, sheet_latest):
         logger.error(f"Error comparing trips and hours: {e}")
         raise
 
+def compare_deductions(sheet_previous, sheet_latest):
+    try:
+        logger.info("Comparing Deductions between previous and latest sheets.")
+        
+        # Select the relevant columns directly
+        previous_values = sheet_previous[["PARTNER", "LIFT LEASE TOTAL"]]
+        latest_values = sheet_latest[["PARTNER", "LIFT LEASE TOTAL"]]
+
+        # Merge both dataframes on "PARTNER" and handle missing values with 0
+        comparison = previous_values.merge(latest_values, on="PARTNER", how="outer", suffixes=("_PREVIOUS", "_LATEST")).fillna(0)
+
+        # Calculate the change in the "LIFT LEASE TOTAL"
+        comparison["CHANGE"] = comparison["LIFT LEASE TOTAL_LATEST"] - comparison["LIFT LEASE TOTAL_PREVIOUS"]
+
+        # Prepare the final dataframe for comparison
+        deductions_comparison = comparison[["PARTNER", "LIFT LEASE TOTAL_PREVIOUS", "LIFT LEASE TOTAL_LATEST", "CHANGE"]].drop_duplicates(subset="PARTNER")
+
+        # Rename columns
+        deductions_comparison.columns = ["PARTNER", "PREVIOUS", "LATEST", "CHANGE"]
+
+        logger.info("Deductions comparison completed.")
+        return deductions_comparison
+
+    except Exception as e:
+        logger.error(f"Error comparing deductions: {e}")
+        raise
+
 
 def apply_formatting(sheet_name, wb):
     try:
@@ -216,7 +245,7 @@ def main(file_previous, file_latest):
         output_folder = "ComparedResults"
         os.makedirs(output_folder, exist_ok=True)
 
-        sheet_pr_previous, sheet_pr_latest, sheet_hours_previous, sheet_hours_latest = load_sheets(file_previous, file_latest)
+        sheet_pr_previous, sheet_pr_latest, sheet_hours_previous, sheet_hours_latest, sheet_lease_previous, sheet_lease_latest = load_sheets(file_previous, file_latest)
 
         # 1. Process the data without any filtering (full comparison)
         # Recalculate totals for both previous and latest
@@ -262,6 +291,7 @@ def main(file_previous, file_latest):
 
         # Compare trips and hours
         trips_comparison_df, hours_comparison_df = compare_trips_and_hours(sheet_hours_previous, sheet_hours_latest)
+        lease_comparison_df = compare_deductions(sheet_lease_previous, sheet_lease_latest)
 
         # Save the full comparison results
         full_comparison_file = os.path.join(output_folder, "Full_Comparison.xlsx")
@@ -270,11 +300,12 @@ def main(file_previous, file_latest):
             operator_changes_df.to_excel(writer, sheet_name="OperatorChanges", index=False)
             trips_comparison_df.to_excel(writer, sheet_name="TripsComparison", index=False)
             hours_comparison_df.to_excel(writer, sheet_name="HoursComparison", index=False)
+            lease_comparison_df.to_excel(writer, sheet_name="LeaseComparison", index=False)
             # Doperator_changes_df.to_excel(writer, sheet_name="DateComparison", index=False)
 
         # Apply formatting to the full comparison file
         wb_full = load_workbook(full_comparison_file)
-        for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison"]:
+        for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison", "LeaseComparison"]:
             apply_formatting(sheet, wb_full)
         wb_full.save(full_comparison_file)
 
@@ -286,6 +317,8 @@ def main(file_previous, file_latest):
             # Filter by client for both previous and latest sheets
             sheet_previous_client = sheet_hours_previous[sheet_hours_previous["CLIENT"] == client]
             sheet_latest_client = sheet_hours_latest[sheet_hours_latest["CLIENT"] == client]
+            sheet_lease_previous_client = sheet_lease_previous[sheet_lease_previous["Type"] == client]
+            sheet_lease_latest_client = sheet_lease_previous[sheet_lease_previous["Type"] == client]
 
             # Recalculate totals for client
             totals_previous_client = calculate_client_totals(sheet_previous_client, sheet_pr_previous, client)
@@ -329,6 +362,7 @@ def main(file_previous, file_latest):
 
             # Compare trips and hours for the client
             trips_comparison_df_client, hours_comparison_df_client = compare_trips_and_hours(sheet_previous_client, sheet_latest_client)
+            lease_comparison_df = compare_deductions(sheet_lease_previous_client, sheet_lease_latest_client)
 
             # Save output for the client
             client_output_file = os.path.join(output_folder, f"{client}_Comparison.xlsx")
@@ -337,11 +371,12 @@ def main(file_previous, file_latest):
                 operator_changes_df_client.to_excel(writer, sheet_name="OperatorChanges", index=False)
                 trips_comparison_df_client.to_excel(writer, sheet_name="TripsComparison", index=False)
                 hours_comparison_df_client.to_excel(writer, sheet_name="HoursComparison", index=False)
+                lease_comparison_df.to_excel(writer, sheet_name="LeaseComparison", index=False)
                 # Doperator_changes_df.to_excel(writer, sheet_name="DateComparison", index=False)
 
             # Apply formatting to the client's output
             wb_client = load_workbook(client_output_file)
-            for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison"]:
+            for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison","LeaseComparison"]:
                 apply_formatting(sheet, wb_client)
             wb_client.save(client_output_file)
             wb_client.close()
