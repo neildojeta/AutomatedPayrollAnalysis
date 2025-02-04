@@ -6,6 +6,7 @@ from openpyxl.styles import Font, Alignment, Border, Side, PatternFill
 import tkinter as tk
 from tkinter import filedialog
 import dashboard as db
+import time
 
 log_folder = "Logs"
 os.makedirs(log_folder, exist_ok=True)
@@ -23,6 +24,9 @@ logger = logging.getLogger()
 # Declare global variables
 file_entry_previous = None
 file_entry_latest = None
+
+calculated_amount = []
+# calculated_totals = 0
 
 def load_sheets(file_previous, file_latest):
     try:
@@ -51,37 +55,141 @@ def clean_currency(value):
 
 def calculate_totals(hours_sheet, pr_sheet):
     try:
-        logger.info("Calculating totals for trips, hours, operators, and amounts.")
+        calculated_totals = 0
+        clients = hours_sheet["CLIENT"].unique()
+        for client in clients: 
+            # logger.info(f"Calculating totals for {client} clients.")
+
+            client_header_row = pr_sheet[pr_sheet.iloc[:, 0].astype(str).str.contains(client, na=False, case=False)]
+            # Get the index of the client header row
+            client_header_index = client_header_row.index[0]
+            # logger.info(f"Found client header for {client} at row {client_header_index}.")
+
+            # Find the first empty row after the client header row to determine the endpoint
+            empty_row_index = pr_sheet.iloc[client_header_index + 1:, 0].isna().idxmax()
+
+            if pd.isna(empty_row_index):
+                # If no empty row is found, use the last row of the DataFrame
+                next_header_index = pr_sheet.shape[0]
+            else:
+                # The index of the first empty row marks the endpoint
+                next_header_index = empty_row_index + client_header_index + 1
+
+            # logger.info(f"Partner rows for client {client} are between rows {client_header_index + 1} and {next_header_index - 1}.")
+
+            # Extract the partner rows between the client header and the first empty row
+            partner_rows = pr_sheet.iloc[client_header_index + 1:next_header_index]
+
+            # Get all unique partners for this client from the hours sheet
+            total_partners = hours_sheet["PARTNER"].unique()
+            # logger.info(f"Total partners for {client}: {len(total_partners)}")
+
+            total_amount = 0
+
+            # Calculate total amount for matching partners
+            for partner in total_partners:
+                # Find rows in partner_rows matching the partner
+                partner_rows_matched = partner_rows[partner_rows.iloc[:, 0].astype(str).str.strip() == str(partner).strip()]
+
+                if not partner_rows_matched.empty:
+                    # Add the amount found in column 14 (assuming it's the amount column)
+                    total_amount += partner_rows_matched.iloc[0, 14]  # Column 14 contains the amount
+                    # logger.info(f"Amount for partner {partner}: {partner_rows_matched.iloc[0, 14]}")
+            calculated_totals += total_amount
+        logger.info(f"Total amount for client {client}: {total_amount}")
+        # logger.info("Calculating totals for trips, hours, operators, and amounts.")
+        logger.info(f"Total calculated mamount:{calculated_totals}")
         return {
             "TRIPS": hours_sheet["TRIPS"].sum(),
             "HOURS": hours_sheet["SERVICE HOURS OPERATED"].sum(),
             "OPERATORS": hours_sheet["OPERATOR NAME"].nunique(),
             "DAYS": hours_sheet["Date"].nunique(),
-            "AMOUNT": pr_sheet.iloc[79, 14] if len(pr_sheet) > 79 else 0
+            "AMOUNT": calculated_totals
         }
     except Exception as e:
         logger.error(f"Error calculating totals: {e}")
         raise
+    # try:
+    #     total_amount = 0
+    #     for totals in calculated_amount:
+    #         print(totals)
+    #         total_amount+=totals
+        
+    #     logger.info(f"Calculated Amounts: {total_amount}")
+    #     logger.info("Calculating totals for trips, hours, operators, and amounts.")
+    #     return {
+    #         "TRIPS": hours_sheet["TRIPS"].sum(),
+    #         "HOURS": hours_sheet["SERVICE HOURS OPERATED"].sum(),
+    #         "OPERATORS": hours_sheet["OPERATOR NAME"].nunique(),
+    #         "DAYS": hours_sheet["Date"].nunique(),
+    #         "AMOUNT": total_amount
+    #     }
+    # except Exception as e:
+    #     logger.error(f"Error calculating totals: {e}")
+    #     raise
 
 def calculate_client_totals(hours_sheet, pr_sheet, client):
+    global calculated_amount
     try:
-        logger.info(f"Calculating client totals for {client}.")
-        if client == "LAVTA":
+        # Search for the row index where the client header appears
+        client_header_row = pr_sheet[pr_sheet.iloc[:, 0].astype(str).str.contains(client, na=False, case=False)]
+
+        if client_header_row.empty:
+            logger.warning(f"Client {client} not found in PR sheet. Returning 0 for amount.")
             return {
                 "TRIPS": hours_sheet["TRIPS"].sum(),
                 "HOURS": hours_sheet["SERVICE HOURS OPERATED"].sum(),
                 "OPERATORS": hours_sheet["OPERATOR NAME"].nunique(),
                 "DAYS": hours_sheet["Date"].nunique(),
-                "AMOUNT": pr_sheet.iloc[76, 14] if len(pr_sheet) > 76 else 0
+                "AMOUNT": 0
             }
+
+        # Get the index of the client header row
+        client_header_index = client_header_row.index[0]
+        logger.info(f"Found client header for {client} at row {client_header_index}.")
+
+        # Find the first empty row after the client header row to determine the endpoint
+        empty_row_index = pr_sheet.iloc[client_header_index + 1:, 0].isna().idxmax()
+
+        if pd.isna(empty_row_index):
+            # If no empty row is found, use the last row of the DataFrame
+            next_header_index = pr_sheet.shape[0]
         else:
-            return {
-                "TRIPS": hours_sheet["TRIPS"].sum(),
-                "HOURS": hours_sheet["SERVICE HOURS OPERATED"].sum(),
-                "OPERATORS": hours_sheet["OPERATOR NAME"].nunique(),
-                "DAYS": hours_sheet["Date"].nunique(),
-                "AMOUNT": pr_sheet.iloc[27, 14] if len(pr_sheet) > 27 else 0
-            }
+            # The index of the first empty row marks the endpoint
+            next_header_index = empty_row_index + client_header_index + 1
+
+        logger.info(f"Partner rows for client {client} are between rows {client_header_index + 1} and {next_header_index - 1}.")
+
+        # Extract the partner rows between the client header and the first empty row
+        partner_rows = pr_sheet.iloc[client_header_index + 1:next_header_index]
+
+        # Get all unique partners for this client from the hours sheet
+        total_partners = hours_sheet["PARTNER"].unique()
+        logger.info(f"Total partners for {client}: {len(total_partners)}")
+
+        total_amount = 0
+
+        # Calculate total amount for matching partners
+        for partner in total_partners:
+            # Find rows in partner_rows matching the partner
+            partner_rows_matched = partner_rows[partner_rows.iloc[:, 0].astype(str).str.strip() == str(partner).strip()]
+
+            if not partner_rows_matched.empty:
+                # Add the amount found in column 14 (assuming it's the amount column)
+                total_amount += partner_rows_matched.iloc[0, 14]  # Column 14 contains the amount
+                logger.info(f"Amount for partner {partner}: {partner_rows_matched.iloc[0, 14]}")
+        calculated_amount.append(total_amount)
+        logger.info(f"Total amount for client {client}: {total_amount}")
+
+        # Return the calculated totals
+        return {
+            "TRIPS": hours_sheet["TRIPS"].sum(),
+            "HOURS": hours_sheet["SERVICE HOURS OPERATED"].sum(),
+            "OPERATORS": hours_sheet["OPERATOR NAME"].nunique(),
+            "DAYS": hours_sheet["Date"].nunique(),
+            "AMOUNT": total_amount
+        }
+
     except Exception as e:
         logger.error(f"Error calculating client totals for {client}: {e}")
         raise
@@ -134,7 +242,11 @@ def compare_trips_and_hours(sheet_previous, sheet_latest):
 
         comparison = grouped_previous.join(grouped_latest, how="outer", lsuffix="_PREVIOUS", rsuffix="_LATEST").fillna(0)
         comparison["TRIPS_CHANGE"] = comparison["TRIPS_LATEST"] - comparison["TRIPS_PREVIOUS"]
-        comparison["HOURS_CHANGE"] = comparison["SERVICE HOURS OPERATED_LATEST"] - comparison["SERVICE HOURS OPERATED_PREVIOUS"]
+
+        # Round hours values to two decimal places
+        comparison["SERVICE HOURS OPERATED_PREVIOUS"] = comparison["SERVICE HOURS OPERATED_PREVIOUS"].round(2)
+        comparison["SERVICE HOURS OPERATED_LATEST"] = comparison["SERVICE HOURS OPERATED_LATEST"].round(2)
+        comparison["HOURS_CHANGE"] = (comparison["SERVICE HOURS OPERATED_LATEST"] - comparison["SERVICE HOURS OPERATED_PREVIOUS"]).round(2)
 
         trips_comparison = comparison[["TRIPS_PREVIOUS", "TRIPS_LATEST", "TRIPS_CHANGE"]].reset_index()
         trips_comparison.columns = ["PARTNER", "PREVIOUS", "LATEST", "CHANGE"]
@@ -246,6 +358,81 @@ def main(file_previous, file_latest):
         os.makedirs(output_folder, exist_ok=True)
 
         sheet_pr_previous, sheet_pr_latest, sheet_hours_previous, sheet_hours_latest, sheet_lease_previous, sheet_lease_latest = load_sheets(file_previous, file_latest)
+        # totals_previous = None
+        # totals_latest = None
+        # 2. Process the data for each client
+        # Process data for each client
+        unique_clients = sheet_hours_latest["CLIENT"].dropna().unique()
+
+        for client in unique_clients:
+            # Filter by client for both previous and latest sheets
+            sheet_previous_client = sheet_hours_previous[sheet_hours_previous["CLIENT"] == client]
+            sheet_latest_client = sheet_hours_latest[sheet_hours_latest["CLIENT"] == client]
+            sheet_lease_previous_client = sheet_lease_previous[sheet_lease_previous["Type"] == client]
+            sheet_lease_latest_client = sheet_lease_previous[sheet_lease_previous["Type"] == client]
+
+            # Recalculate totals for client
+            totals_previous_client = calculate_client_totals(sheet_previous_client, sheet_pr_previous, client)
+            # totals_previous = calculate_totals(sheet_hours_previous, sheet_pr_previous)
+            totals_latest_client = calculate_client_totals(sheet_latest_client, sheet_pr_latest, client)
+            # totals_latest = calculate_totals(sheet_hours_latest, sheet_pr_latest)
+
+            # Calculate differences and changes for the client
+            differences_client = {
+                "TRIPS": totals_latest_client["TRIPS"] - totals_previous_client["TRIPS"],
+                "HOURS": totals_latest_client["HOURS"] - totals_previous_client["HOURS"],
+                "OPERATORS": totals_latest_client["OPERATORS"] - totals_previous_client["OPERATORS"],
+                "DAYS": totals_latest_client["DAYS"] - totals_previous_client["DAYS"],
+                "AMOUNT": totals_latest_client["AMOUNT"] - totals_previous_client["AMOUNT"],
+            }
+            changes_client = {key: "Increased" if diff > 0 else "Decreased" if diff < 0 else "No Change"
+                              for key, diff in differences_client.items()}
+
+            # Create summary DataFrame for the client
+            summary_table_client = {
+                "Metric": ["TRIPS", "HOURS", "OPERATORS", "DAYS", "AMOUNT"],
+                "Previous": [totals_previous_client[key] for key in totals_previous_client],
+                "Latest": [totals_latest_client[key] for key in totals_latest_client],
+                "Difference": [differences_client[key] for key in differences_client],
+                "Change": [changes_client[key] for key in changes_client],
+            }
+            summary_df_client = pd.DataFrame(summary_table_client)
+
+            # Compare operators for the client
+            operator_changes_client = compare_operators(sheet_previous_client, sheet_latest_client)
+            added_df_client = pd.DataFrame(operator_changes_client["Added"])
+            removed_df_client = pd.DataFrame(operator_changes_client["Removed"])
+            added_df_client["Change"] = "Added"
+            removed_df_client["Change"] = "Removed"
+            operator_changes_df_client = pd.concat([added_df_client, removed_df_client], ignore_index=True)
+
+            # Compare operators
+            # date_changes = compare_dates(sheet_hours_previous, sheet_hours_latest)
+            # Dadded_df = pd.DataFrame(date_changes["Added"])
+            # Dremoved_df = pd.DataFrame(date_changes["Removed"])
+            # Dremoved_df["Change"] = "Removed"
+            # Doperator_changes_df = pd.concat([Dadded_df, Dremoved_df], ignore_index=True)
+
+            # Compare trips and hours for the client
+            trips_comparison_df_client, hours_comparison_df_client = compare_trips_and_hours(sheet_previous_client, sheet_latest_client)
+            lease_comparison_df = compare_deductions(sheet_lease_previous_client, sheet_lease_latest_client)
+
+            # Save output for the client
+            client_output_file = os.path.join(output_folder, f"{client}_Comparison.xlsx")
+            with pd.ExcelWriter(client_output_file, engine="openpyxl") as writer:
+                summary_df_client.to_excel(writer, sheet_name="Summary", index=False)
+                operator_changes_df_client.to_excel(writer, sheet_name="OperatorChanges", index=False)
+                trips_comparison_df_client.to_excel(writer, sheet_name="TripsComparison", index=False)
+                hours_comparison_df_client.to_excel(writer, sheet_name="HoursComparison", index=False)
+                lease_comparison_df.to_excel(writer, sheet_name="LeaseComparison", index=False)
+                # Doperator_changes_df.to_excel(writer, sheet_name="DateComparison", index=False)
+
+            # Apply formatting to the client's output
+            wb_client = load_workbook(client_output_file)
+            for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison","LeaseComparison"]:
+                apply_formatting(sheet, wb_client)
+            wb_client.save(client_output_file)
+        wb_client.close()
 
         # 1. Process the data without any filtering (full comparison)
         # Recalculate totals for both previous and latest
@@ -308,81 +495,10 @@ def main(file_previous, file_latest):
         for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison", "LeaseComparison"]:
             apply_formatting(sheet, wb_full)
         wb_full.save(full_comparison_file)
-
-        # 2. Process the data for each client
-        # Process data for each client
-        unique_clients = sheet_hours_latest["CLIENT"].dropna().unique()
-
-        for client in unique_clients:
-            # Filter by client for both previous and latest sheets
-            sheet_previous_client = sheet_hours_previous[sheet_hours_previous["CLIENT"] == client]
-            sheet_latest_client = sheet_hours_latest[sheet_hours_latest["CLIENT"] == client]
-            sheet_lease_previous_client = sheet_lease_previous[sheet_lease_previous["Type"] == client]
-            sheet_lease_latest_client = sheet_lease_previous[sheet_lease_previous["Type"] == client]
-
-            # Recalculate totals for client
-            totals_previous_client = calculate_client_totals(sheet_previous_client, sheet_pr_previous, client)
-            totals_latest_client = calculate_client_totals(sheet_latest_client, sheet_pr_latest, client)
-
-            # Calculate differences and changes for the client
-            differences_client = {
-                "TRIPS": totals_latest_client["TRIPS"] - totals_previous_client["TRIPS"],
-                "HOURS": totals_latest_client["HOURS"] - totals_previous_client["HOURS"],
-                "OPERATORS": totals_latest_client["OPERATORS"] - totals_previous_client["OPERATORS"],
-                "DAYS": totals_latest_client["DAYS"] - totals_previous_client["DAYS"],
-                "AMOUNT": totals_latest_client["AMOUNT"] - totals_previous_client["AMOUNT"],
-            }
-            changes_client = {key: "Increased" if diff > 0 else "Decreased" if diff < 0 else "No Change"
-                              for key, diff in differences_client.items()}
-
-            # Create summary DataFrame for the client
-            summary_table_client = {
-                "Metric": ["TRIPS", "HOURS", "OPERATORS", "DAYS", "AMOUNT"],
-                "Previous": [totals_previous_client[key] for key in totals_previous_client],
-                "Latest": [totals_latest_client[key] for key in totals_latest_client],
-                "Difference": [differences_client[key] for key in differences_client],
-                "Change": [changes_client[key] for key in changes_client],
-            }
-            summary_df_client = pd.DataFrame(summary_table_client)
-
-            # Compare operators for the client
-            operator_changes_client = compare_operators(sheet_previous_client, sheet_latest_client)
-            added_df_client = pd.DataFrame(operator_changes_client["Added"])
-            removed_df_client = pd.DataFrame(operator_changes_client["Removed"])
-            added_df_client["Change"] = "Added"
-            removed_df_client["Change"] = "Removed"
-            operator_changes_df_client = pd.concat([added_df_client, removed_df_client], ignore_index=True)
-
-            # Compare operators
-            # date_changes = compare_dates(sheet_hours_previous, sheet_hours_latest)
-            # Dadded_df = pd.DataFrame(date_changes["Added"])
-            # Dremoved_df = pd.DataFrame(date_changes["Removed"])
-            # Dremoved_df["Change"] = "Removed"
-            # Doperator_changes_df = pd.concat([Dadded_df, Dremoved_df], ignore_index=True)
-
-            # Compare trips and hours for the client
-            trips_comparison_df_client, hours_comparison_df_client = compare_trips_and_hours(sheet_previous_client, sheet_latest_client)
-            lease_comparison_df = compare_deductions(sheet_lease_previous_client, sheet_lease_latest_client)
-
-            # Save output for the client
-            client_output_file = os.path.join(output_folder, f"{client}_Comparison.xlsx")
-            with pd.ExcelWriter(client_output_file, engine="openpyxl") as writer:
-                summary_df_client.to_excel(writer, sheet_name="Summary", index=False)
-                operator_changes_df_client.to_excel(writer, sheet_name="OperatorChanges", index=False)
-                trips_comparison_df_client.to_excel(writer, sheet_name="TripsComparison", index=False)
-                hours_comparison_df_client.to_excel(writer, sheet_name="HoursComparison", index=False)
-                lease_comparison_df.to_excel(writer, sheet_name="LeaseComparison", index=False)
-                # Doperator_changes_df.to_excel(writer, sheet_name="DateComparison", index=False)
-
-            # Apply formatting to the client's output
-            wb_client = load_workbook(client_output_file)
-            for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison","LeaseComparison"]:
-                apply_formatting(sheet, wb_client)
-            wb_client.save(client_output_file)
-            wb_client.close()
-
+        wb_full.close()
 
         logger.info(f"Main comparison process completed successfully. File saved to {full_comparison_file}.")
+        time.sleep(2)
         db.main(file_previous, file_latest)
     except Exception as e:
         logger.error(f"Error in main comparison process: {e}")

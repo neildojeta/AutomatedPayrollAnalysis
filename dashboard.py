@@ -5,11 +5,26 @@ import win32com.client
 from openpyxl.drawing.image import Image
 from PIL import Image as PILImage, ImageDraw, ImageFont
 import os
+import logging
+import time
+import sys
 
+# Set up logging
+log_folder = "Logs"
+os.makedirs(log_folder, exist_ok=True)
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(os.path.join(log_folder, 'Comparison.log')),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger()
 
 # Define the comparison files and corresponding sheets
 def main(file_previous, file_latest): 
-    print(f"{file_previous} + {file_latest}")
+    logger.info(f"{file_previous} + {file_latest}")
     comparison_files = [
         ('ComparedResults/Full_Comparison.xlsx', 'Dashboard'),
         ('ComparedResults/CCCTA_Comparison.xlsx', 'CCCTA'),
@@ -18,7 +33,7 @@ def main(file_previous, file_latest):
 
     # Open the Dashboard workbook
     dashboard_file = 'ComparedResults/Dashboard.xlsm'
-    app = xw.App(visible=False)
+    app = xw.App(visible=True)
 
     try:
         # Open the existing workbook (Dashboard)
@@ -101,7 +116,7 @@ def main(file_previous, file_latest):
 
             # Access the days operated shape via the API and set the value
             txt_full_days = sheet_dashboard.shapes['txtDDays'].api
-            txt_full_days.TextFrame2.TextRange.Text = f"{prev_full_days} hours to {lat_full_days} hours"
+            txt_full_days.TextFrame2.TextRange.Text = f"{prev_full_days} days to {lat_full_days} days"
             txt_full_days_diff = sheet_dashboard.shapes['txtDaysDiff'].api
             txt_full_days_diff.TextFrame2.TextRange.Text = f"{diff_full_days} days"
 
@@ -113,9 +128,9 @@ def main(file_previous, file_latest):
 
                 # Call the VBA macro to update color
                 wb_dashboard.macro("UpdateTextBoxColor")(sheet_name, textBoxName, status)
-                print(f"Successfully updated color for {textBoxName} with status '{status}'.")
+                logger.info(f"Successfully updated color for {textBoxName} with status '{status}'.")
             except Exception as e:
-                print(f"An error occurred: {e}")
+                logger.error(f"An error occurred: {e}")
 
             # Run the VBA macro to update the color based on the values
             try:
@@ -126,20 +141,22 @@ def main(file_previous, file_latest):
                 # Loop through the text boxes and update colors based on the values
                 for i, textBoxName in enumerate(textBoxNames):
                     wb_dashboard.macro("UpdateSummaryColor")(sheet_name, textBoxName, values[i])
-                    print(f"Successfully updated color for {textBoxName} with value '{values[i]}'.")
+                    logger.info(f"Successfully updated color for {textBoxName} with value '{values[i]}'.")
             except Exception as e:
-                print(f"An error occurred: {e}")
+                logger.error(f"An error occurred: {e}")
 
         # Save the changes to the dashboard workbook
         wb_dashboard.save()
         wb_dashboard.close()
-        print(f"{dashboard_file} has been successfully updated and saved.")
+        logger.info(f"{dashboard_file} has been successfully updated and saved.")
 
         # paste_picture(comparison_files, dashboard_file)
+        app.quit()
+        time.sleep(2)
         paste_picture()
 
     except Exception as e:
-        print(f"An error occurred: {e}")
+        logger.info(f"An error occurred: {e}")
     # finally:
     #     wb_dashboard.save()
     #     wb_dashboard.close()
@@ -151,52 +168,65 @@ def main(file_previous, file_latest):
 
 def paste_picture():
     comparison_files = [
-        ('ComparedResults/Full_Comparison.xlsx', 'Dashboard'),
-        ('ComparedResults/CCCTA_Comparison.xlsx', 'CCCTA'),
-        ('ComparedResults/LAVTA_Comparison.xlsx', 'LAVTA')
+        ('ComparedResults\\Full_Comparison.xlsx', 'Dashboard'),
+        ('ComparedResults\\CCCTA_Comparison.xlsx', 'CCCTA'),
+        ('ComparedResults\\LAVTA_Comparison.xlsx', 'LAVTA')
     ]
     
     # Target cells for each sheet in the comparison file
     target_cells = {
         'TripsComparison': (11, 21),
         'HoursComparison': (44, 4),
-        'OperatorChanges': (44, 16),
-        'LeaseComparison': (44, 26)
+        'OperatorChanges': (44, 18),
+        'LeaseComparison': (44, 29)
     }
 
     relative_dashboard_path = "ComparedResults\\Dashboard.xlsm"
     # Get the absolute path of the current script's directory
-    script_dir = os.path.dirname(os.path.realpath(__file__))
+    # script_dir = os.path.dirname(os.path.realpath(__file__))
 
-    # Build the full path to the dashboard file by joining the script directory and the relative path
-    dashboard_file = os.path.join(script_dir, relative_dashboard_path)
+    # # Build the full path to the dashboard file by joining the script directory and the relative path
+    # dashboard_file = os.path.join(script_dir, relative_dashboard_path)
+
+    # Get the base directory correctly whether running as script or PyInstaller executable
+    if getattr(sys, 'frozen', False):
+        script_dir = os.path.dirname(sys.executable)  # Executable folder
+    else:
+        script_dir = os.path.dirname(os.path.realpath(__file__))  # Script folder
+
+    dashboard_file = os.path.join(script_dir, "ComparedResults", "Dashboard.xlsm")
+
+    excel = None
 
     try:
         # Initialize Excel application
         excel = win32com.client.Dispatch("Excel.Application")
-        excel.Visible = False  # Set to True for debugging
+        excel.Visible = True  # Set to True for debugging
 
         # Check if the file exists
         if not os.path.exists(dashboard_file):
-            print(f"Error: Dashboard file does not exist at {dashboard_file}")
+            logger.info(f"Error: Dashboard file does not exist at {dashboard_file}")
             return
         
         # Open the Dashboard workbook
         wb_dashboard = excel.Workbooks.Open(dashboard_file)
         if wb_dashboard is None:
-            print(f"Failed to open the Dashboard workbook at {dashboard_file}")
+            logger.info(f"Failed to open the Dashboard workbook at {dashboard_file}")
             return
 
         # Delete existing pictures if they exist
         for target_sheet_name in ['Dashboard', 'CCCTA', 'LAVTA']:
             ws_dashboard = wb_dashboard.Sheets(target_sheet_name)
-            for picture_name in ['TripsTable', 'HoursTable', 'OperatorTable, LeaseTable']:
+            ws_dashboard.Activate()
+            for picture_name in ['TripsTable', 'HoursTable', 'OperatorTable', 'LeaseTable']:
                 try:
                     ws_dashboard.Shapes(picture_name).Delete()  # Attempt to delete the picture
-                    print(f"Deleted existing picture: {picture_name} in {target_sheet_name}")
+                    logger.info(f"Deleted existing picture: {picture_name} in {target_sheet_name}")
                 except Exception:
-                    print(f"No existing picture named {picture_name} found in {target_sheet_name}")
+                    logger.info(f"No existing picture named {picture_name} found in {target_sheet_name}")  
 
+        time.sleep(2)
+        
         # Process each comparison file
         for comparison_file, target_sheet_name in comparison_files:
             # Build the full path for the comparison file
@@ -204,35 +234,50 @@ def paste_picture():
             
             # Check if the comparison file exists
             if not os.path.exists(comparison_file_path):
-                print(f"Error: Comparison file does not exist at {comparison_file_path}")
+                logger.info(f"Error: Comparison file does not exist at {comparison_file_path}")
                 continue
 
             # Open the comparison workbook
             wb_comparison = excel.Workbooks.Open(comparison_file_path)
             if wb_comparison is None:
-                print(f"Failed to open the comparison workbook at {comparison_file_path}")
+                logger.info(f"Failed to open the comparison workbook at {comparison_file_path}")
                 continue
 
             # Process each sheet in the comparison file (TripsComparison, HoursComparison, OperatorChanges)
             for sheet_name, target_cell in target_cells.items():
                 sheet = wb_comparison.Sheets(sheet_name)
+                table_width = 0
+                table_height = 0
+                table_name = None
                 if sheet is None:
-                    print(f"Failed to access the '{sheet_name}' sheet in {comparison_file_path}")
+                    logger.info(f"Failed to access the '{sheet_name}' sheet in {comparison_file_path}")
                     continue
 
                 # Get the used range
                 used_range = sheet.UsedRange
 
-                # Export the range to a temporary clipboard as a picture
-                used_range.CopyPicture(Format=2)  # Format=2 -> Bitmap format (default)
+                time.sleep(1)
+                if used_range.Rows.Count > 1 and used_range.Columns.Count > 1:
+                    try:
+                        table_width = (used_range.Width) # Get the width of the used range
+                        table_height = (used_range.Height) # Get the height of the used range
+                        used_range.CopyPicture(Format=2)
+                        logger.info(f"Copied picture from {sheet_name}, width: {table_width*0.0352778:.2f} cm, height: {table_height*0.0352778:.2f} cm")
+                    except Exception as e:
+                        logger.error(f"Failed to copy picture from {sheet_name}: {e}")
+                        continue
+                else:
+                    logger.error(f"Skipping {sheet_name}: No data in the range.")
+                    continue
 
                 # Activate the target sheet in the Dashboard workbook
                 ws_dashboard = wb_dashboard.Sheets(target_sheet_name)
                 if ws_dashboard is None:
-                    print(f"Failed to access the sheet '{target_sheet_name}' in the Dashboard workbook.")
+                    logger.info(f"Failed to access the sheet '{target_sheet_name}' in the Dashboard workbook.")
                     wb_comparison.Close(SaveChanges=False)
                     continue
-
+                
+                time.sleep(1)
                 # Paste as a picture into the target sheet
                 ws_dashboard.Activate()
                 row, col = target_cell
@@ -254,33 +299,104 @@ def paste_picture():
                 elif sheet_name == 'LeaseComparison':
                     pasted_picture.Name = 'LeaseTable'
 
+                table_name = pasted_picture.Name
+                logger.info(f"Table Name: {table_name}")
+
+                time.sleep(1)
+                logger.info(f"'{pasted_picture.Name}' successfully pasted in the {sheet_name} Sheet.")
+
+                # Adjust the container size based on the table size
+                # Adjust only the container that matches the table name
+                if table_name:
+                    container_name = table_name.replace("Table", "Container")  # Match the container name
+                    try:
+                        container = ws_dashboard.Shapes(container_name)
+                        container.Width = table_width + 95  # Add 3.35 cm to width
+                        container.Height = table_height + 123  # Add 4.33 cm to height
+                        logger.info(f"Resized {container_name} to width: {(container.Width)*0.0352778:.2f} cm, height: {(container.Height)*0.0352778:.2f} cm")
+                    except Exception as e:
+                        logger.error(f"Failed to resize {container_name}: {e}")
+
+                # wb_comparison.Save()
+                # wb_dashboard.Save()
+        wb_comparison.Save()
+        wb_comparison.Close() 
             # Close the comparison workbook without saving
-            wb_comparison.Close(SaveChanges=True)
+            # wb_comparison.Close(SaveChanges=True)
 
         # Save and close the Dashboard workbook
         wb_dashboard.Save()
         wb_dashboard.Close()
         excel.Quit()
 
-        print("Data pasted as pictures successfully.")
+        logger.info("Data pasted as pictures successfully.")
 
         # app = xw.App(visible=True)  # Open Excel with the app visible
         # wb_dashboard = app.books.open(dashboard_file)  # Reopen the file
     except Exception as e:
-        print(f"An error occurred: {e}")
+        logger.error(f"An error occurred: {e}")
+
+        if 'wb_dashboard' in locals() and wb_dashboard:
+            wb_dashboard.Close(SaveChanges=False)
+
+        if excel:
+            excel.Quit()
+            del excel
+        # logger.error(f"An error occurred: {e}")
+        # wb_dashboard.Close()
+        # excel.Quit()
+        # del excel 
     finally:
         # Ensure Excel is properly quit and the object is released
         if excel:
             excel.Quit()  # Close the Excel application
             del excel 
+        app = xw.App(visible=True)  # Open Excel with the app visible
+        wb_dashboard = app.books.open(dashboard_file)  # Reopen the file
+
+# def adjust_container(table_name, table_width, table_height):
+#     for target_sheet_name in ['Dashboard', 'CCCTA', 'LAVTA']:
+#             ws_dashboard = wb_dashboard.Sheets(target_sheet_name)
+#             ws_dashboard.Activate()
+#             for picture_name in ['TripsTable', 'HoursTable', 'OperatorTable', 'LeaseTable']:
+#                 try:
+#                     ws_dashboard.Shapes(picture_name).Delete()  # Attempt to delete the picture
+#                     logger.info(f"Deleted existing picture: {picture_name} in {target_sheet_name}")
+#                 except Exception:
+#                     logger.info(f"No existing picture named {picture_name} found in {target_sheet_name}")  
+
+#     # Get the active table and container dimensions
+#     if table_name == 'TripsTable':
+#     elif table_name == 'HoursTable':
+#     elif table_name == 'OperatorTable':
+#     elif table_name == 'LeaseTable':
+
+#     # Calculate the aspect ratios
+#     table_aspect_ratio = table_width / table_height
+#     container_aspect_ratio = container_width / container_height
+
+#     # Determine the scaling factor
+#     if table_aspect_ratio > container_aspect_ratio:
+#         # Scale based on width
+#         scale_factor = container_width / table_width
+#     else:
+#         # Scale based on height
+#         scale_factor = container_height / table_height
+
+#     # Calculate the new dimensions
+#     new_width = table_width * scale_factor
+#     new_height = table_height * scale_factor
+
+#     return new_width, new_height
 
 # if __name__ == '__main__':
-    # main()
-    # comparison_files = [
-    #     ('Compared Results/Full_Comparison.xlsx', 'Dashboard'),
-    #     ('Compared Results/CCCTA_Comparison.xlsx', 'CCCTA'),
-    #     ('Compared Results/LAVTA_Comparison.xlsx', 'LAVTA')
-    # ]
-    # dashboard_file = 'Compared Results/Dashboard.xlsm'
-    # paste_picture(comparison_files, dashboard_file)
-    # paste_picture(comparison_files, dashboard_file)
+    
+#     comparison_files = [
+#         ('Compared Results/Full_Comparison.xlsx', 'Dashboard'),
+#         ('Compared Results/CCCTA_Comparison.xlsx', 'CCCTA'),
+#         ('Compared Results/LAVTA_Comparison.xlsx', 'LAVTA')
+#     ]
+#     dashboard_file = 'Compared Results/Dashboard.xlsm'
+#     main(file_previous, file_latest)
+#     paste_picture(comparison_files, dashboard_file)
+#     paste_picture(comparison_files, dashboard_file)
