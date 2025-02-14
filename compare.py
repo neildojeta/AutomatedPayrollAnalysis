@@ -234,6 +234,35 @@ def compare_dates(sheet_previous, sheet_latest):
         logger.error(f"Error comparing dates: {e}")
         raise
 
+def find_missing_dates(sheet_previous, sheet_latest):
+    try:
+        logger.info("Checking for missing dates in the consecutive range.")
+        
+        # Extracting the Date column and dropping NaN values
+        dates_previous = set(pd.to_datetime(sheet_previous["Date"].dropna()))
+        dates_latest = set(pd.to_datetime(sheet_latest["Date"].dropna()))
+        
+        # Finding the full expected date range
+        all_dates = pd.date_range(min(dates_previous.union(dates_latest)), 
+                                  max(dates_previous.union(dates_latest)))
+        
+        # Finding missing dates
+        missing_dates = sorted(set(all_dates) - dates_previous - dates_latest)
+        
+        # Converting to DataFrame
+        if not missing_dates:
+            missing_df = pd.DataFrame({"Missing Dates of Work": ["There are no missing dates of work."]})
+        else:
+            # missing_df = pd.DataFrame(missing_dates, columns=["Missing Dates"])
+            missing_df = pd.DataFrame([date.strftime("-----  %B %d, %Y  -----") for date in missing_dates], columns=["Missing Dates of Work"])
+        
+        logger.info("Missing date check completed.")
+        return missing_df
+    except Exception as e:
+        logger.error(f"Error finding missing dates: {e}")
+        raise
+
+
 def compare_trips_and_hours(sheet_previous, sheet_latest):
     try:
         logger.info("Comparing trips and hours data between previous and latest sheets.")
@@ -406,12 +435,14 @@ def main(file_previous, file_latest):
             removed_df_client["Change"] = "Removed"
             operator_changes_df_client = pd.concat([added_df_client, removed_df_client], ignore_index=True)
 
-            # Compare operators
-            # date_changes = compare_dates(sheet_hours_previous, sheet_hours_latest)
-            # Dadded_df = pd.DataFrame(date_changes["Added"])
-            # Dremoved_df = pd.DataFrame(date_changes["Removed"])
-            # Dremoved_df["Change"] = "Removed"
-            # Doperator_changes_df = pd.concat([Dadded_df, Dremoved_df], ignore_index=True)
+            # Compare dates
+            date_changes = compare_dates(sheet_previous_client, sheet_latest_client)
+            Dadded_df = pd.DataFrame(date_changes["Added"])
+            Dremoved_df = pd.DataFrame(date_changes["Removed"])
+            Dremoved_df["Change"] = "Removed"
+            Doperator_changes_df = pd.concat([Dadded_df, Dremoved_df], ignore_index=True)
+
+            missing_dates_df = find_missing_dates(sheet_previous_client, sheet_latest_client)
 
             # Compare trips and hours for the client
             trips_comparison_df_client, hours_comparison_df_client = compare_trips_and_hours(sheet_previous_client, sheet_latest_client)
@@ -425,11 +456,13 @@ def main(file_previous, file_latest):
                 trips_comparison_df_client.to_excel(writer, sheet_name="TripsComparison", index=False)
                 hours_comparison_df_client.to_excel(writer, sheet_name="HoursComparison", index=False)
                 lease_comparison_df.to_excel(writer, sheet_name="LeaseComparison", index=False)
-                # Doperator_changes_df.to_excel(writer, sheet_name="DateComparison", index=False)
+                Doperator_changes_df.to_excel(writer, sheet_name="DatesComparison", index=False)
+                missing_dates_df.to_excel(writer, sheet_name="MissingDates", index=False)
+
 
             # Apply formatting to the client's output
             wb_client = load_workbook(client_output_file)
-            for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison","LeaseComparison"]:
+            for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison","LeaseComparison", "DatesComparison", "MissingDates"]:
                 apply_formatting(sheet, wb_client)
             wb_client.save(client_output_file)
         wb_client.close()
@@ -468,13 +501,16 @@ def main(file_previous, file_latest):
         removed_df["Change"] = "Removed"
         operator_changes_df = pd.concat([added_df, removed_df], ignore_index=True)
 
-        # Compare operators
-        # date_changes = compare_dates(sheet_hours_previous, sheet_hours_latest)
-        # Dadded_df = pd.DataFrame(date_changes["Added"])
-        # Dremoved_df = pd.DataFrame(date_changes["Removed"])
-        # Dadded_df["Change"] = "Added"
-        # Dremoved_df["Change"] = "Removed"
-        # Doperator_changes_df = pd.concat([Dadded_df, Dremoved_df], ignore_index=True)
+        # Compare dates
+        date_changes = compare_dates(sheet_hours_previous, sheet_hours_latest)
+        Dadded_df = pd.DataFrame(date_changes["Added"])
+        Dremoved_df = pd.DataFrame(date_changes["Removed"])
+        Dadded_df["Change"] = "Added"
+        Dremoved_df["Change"] = "Removed"
+        Doperator_changes_df = pd.concat([Dadded_df, Dremoved_df], ignore_index=True)
+
+        # Find missing dates
+        missing_dates_df = find_missing_dates(sheet_hours_previous, sheet_hours_latest)
 
         # Compare trips and hours
         trips_comparison_df, hours_comparison_df = compare_trips_and_hours(sheet_hours_previous, sheet_hours_latest)
@@ -488,11 +524,12 @@ def main(file_previous, file_latest):
             trips_comparison_df.to_excel(writer, sheet_name="TripsComparison", index=False)
             hours_comparison_df.to_excel(writer, sheet_name="HoursComparison", index=False)
             lease_comparison_df.to_excel(writer, sheet_name="LeaseComparison", index=False)
-            # Doperator_changes_df.to_excel(writer, sheet_name="DateComparison", index=False)
+            Doperator_changes_df.to_excel(writer, sheet_name="DatesComparison", index=False)
+            missing_dates_df.to_excel(writer, sheet_name="MissingDates", index=False)
 
         # Apply formatting to the full comparison file
         wb_full = load_workbook(full_comparison_file)
-        for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison", "LeaseComparison"]:
+        for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison", "LeaseComparison", "DatesComparison", "MissingDates"]:
             apply_formatting(sheet, wb_full)
         wb_full.save(full_comparison_file)
         wb_full.close()

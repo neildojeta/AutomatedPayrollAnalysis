@@ -178,7 +178,8 @@ def paste_picture():
         'TripsComparison': (44, 15),
         'HoursComparison': (44, 4),
         'OperatorChanges': (12, 22),
-        'LeaseComparison': (44, 26)
+        'LeaseComparison': (44, 26),
+        'MissingDates': (12, 33)
     }
 
     relative_dashboard_path = "ComparedResults\\Dashboard.xlsm"
@@ -218,7 +219,7 @@ def paste_picture():
         for target_sheet_name in ['Dashboard', 'CCCTA', 'LAVTA']:
             ws_dashboard = wb_dashboard.Sheets(target_sheet_name)
             ws_dashboard.Activate()
-            for picture_name in ['TripsTable', 'HoursTable', 'OperatorTable', 'LeaseTable']:
+            for picture_name in ['TripsTable', 'HoursTable', 'OperatorTable', 'LeaseTable', 'DatesTable']:
                 try:
                     ws_dashboard.Shapes(picture_name).Delete()  # Attempt to delete the picture
                     logger.info(f"Deleted existing picture: {picture_name} in {target_sheet_name}")
@@ -257,7 +258,7 @@ def paste_picture():
                 used_range = sheet.UsedRange
 
                 time.sleep(1)
-                if used_range.Rows.Count > 1 and used_range.Columns.Count > 1:
+                if used_range.Rows.Count > 0 and used_range.Columns.Count > 0:
                     try:
                         table_width = (used_range.Width) # Get the width of the used range
                         table_height = (used_range.Height) # Get the height of the used range
@@ -298,6 +299,8 @@ def paste_picture():
                     pasted_picture.Name = 'OperatorTable'
                 elif sheet_name == 'LeaseComparison':
                     pasted_picture.Name = 'LeaseTable'
+                elif sheet_name == 'MissingDates':
+                    pasted_picture.Name = 'DatesTable'
 
                 table_name = pasted_picture.Name
                 logger.info(f"Table Name: {table_name}")
