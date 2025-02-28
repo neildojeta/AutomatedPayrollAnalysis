@@ -37,8 +37,10 @@ def load_sheets(file_previous, file_latest):
         sheet_hours_latest = pd.read_excel(file_latest, sheet_name="Hours_Working")
         sheet_lease_previous = pd.read_excel(file_previous, sheet_name="Deductions")
         sheet_lease_latest = pd.read_excel(file_latest, sheet_name="Deductions")
+        sheet_OS_previous = pd.read_excel(file_previous, sheet_name="Fares_Big Star Export OS")
+        sheet_OS_latest = pd.read_excel(file_latest, sheet_name="Fares_Big Star Export OS")
         logger.info("Sheets loaded successfully.")
-        return sheet_pr_previous, sheet_pr_latest, sheet_hours_previous, sheet_hours_latest, sheet_lease_previous, sheet_lease_latest
+        return sheet_pr_previous, sheet_pr_latest, sheet_hours_previous, sheet_hours_latest, sheet_lease_previous, sheet_lease_latest, sheet_OS_previous, sheet_OS_latest
     except Exception as e:
         logger.error(f"Error loading sheets: {e}")
         raise
@@ -56,8 +58,12 @@ def clean_currency(value):
 def calculate_totals(hours_sheet, pr_sheet):
     try:
         calculated_totals = 0
-        clients = hours_sheet["CLIENT"].unique()
-        for client in clients: 
+        # clients = hours_sheet["CLIENT"].unique()
+        clients = set(hours_sheet["CLIENT"].unique())  # Use a set to remove duplicates
+        unique_clients = set(hours_sheet["CLIENT"].dropna())  # If 'client' is a column in a pandas DataFrame
+
+        logger.info(f"Unique clients: {clients}")
+        for client in unique_clients: 
             # logger.info(f"Calculating totals for {client} clients.")
 
             client_header_row = pr_sheet[pr_sheet.iloc[:, 0].astype(str).str.contains(client, na=False, case=False)]
@@ -269,7 +275,7 @@ def compare_trips_and_hours(sheet_previous, sheet_latest):
         grouped_previous = sheet_previous.groupby("PARTNER")[["TRIPS", "SERVICE HOURS OPERATED"]].sum()
         grouped_latest = sheet_latest.groupby("PARTNER")[["TRIPS", "SERVICE HOURS OPERATED"]].sum()
 
-        comparison = grouped_previous.join(grouped_latest, how="outer", lsuffix="_PREVIOUS", rsuffix="_LATEST").fillna(0)
+        comparison = grouped_latest.join(grouped_previous, how="outer", lsuffix="_LATEST", rsuffix="_PREVIOUS").fillna(0)
         comparison["TRIPS_CHANGE"] = comparison["TRIPS_LATEST"] - comparison["TRIPS_PREVIOUS"]
 
         # Round hours values to two decimal places
@@ -277,11 +283,11 @@ def compare_trips_and_hours(sheet_previous, sheet_latest):
         comparison["SERVICE HOURS OPERATED_LATEST"] = comparison["SERVICE HOURS OPERATED_LATEST"].round(2)
         comparison["HOURS_CHANGE"] = (comparison["SERVICE HOURS OPERATED_LATEST"] - comparison["SERVICE HOURS OPERATED_PREVIOUS"]).round(2)
 
-        trips_comparison = comparison[["TRIPS_PREVIOUS", "TRIPS_LATEST", "TRIPS_CHANGE"]].reset_index()
-        trips_comparison.columns = ["PARTNER", "PREVIOUS", "LATEST", "CHANGE"]
+        trips_comparison = comparison[["TRIPS_LATEST", "TRIPS_PREVIOUS", "TRIPS_CHANGE"]].reset_index()
+        trips_comparison.columns = ["PARTNER", "LATEST", "PREVIOUS", "CHANGE"]
 
-        hours_comparison = comparison[["SERVICE HOURS OPERATED_PREVIOUS", "SERVICE HOURS OPERATED_LATEST", "HOURS_CHANGE"]].reset_index()
-        hours_comparison.columns = ["PARTNER", "PREVIOUS", "LATEST", "CHANGE"]
+        hours_comparison = comparison[["SERVICE HOURS OPERATED_LATEST", "SERVICE HOURS OPERATED_PREVIOUS", "HOURS_CHANGE"]].reset_index()
+        hours_comparison.columns = ["PARTNER", "LATEST", "PREVIOUS", "CHANGE"]
 
         logger.info("Trips and hours comparison completed.")
         return trips_comparison, hours_comparison
@@ -298,16 +304,16 @@ def compare_deductions(sheet_previous, sheet_latest):
         latest_values = sheet_latest[["PARTNER", "LIFT LEASE TOTAL"]]
 
         # Merge both dataframes on "PARTNER" and handle missing values with 0
-        comparison = previous_values.merge(latest_values, on="PARTNER", how="outer", suffixes=("_PREVIOUS", "_LATEST")).fillna(0)
+        comparison = latest_values.merge(previous_values, on="PARTNER", how="outer", suffixes=("_LATEST", "_PREVIOUS")).fillna(0)
 
         # Calculate the change in the "LIFT LEASE TOTAL"
         comparison["CHANGE"] = comparison["LIFT LEASE TOTAL_LATEST"] - comparison["LIFT LEASE TOTAL_PREVIOUS"]
 
         # Prepare the final dataframe for comparison
-        deductions_comparison = comparison[["PARTNER", "LIFT LEASE TOTAL_PREVIOUS", "LIFT LEASE TOTAL_LATEST", "CHANGE"]].drop_duplicates(subset="PARTNER")
+        deductions_comparison = comparison[["PARTNER", "LIFT LEASE TOTAL_LATEST", "LIFT LEASE TOTAL_PREVIOUS", "CHANGE"]].drop_duplicates(subset="PARTNER")
 
         # Rename columns
-        deductions_comparison.columns = ["PARTNER", "PREVIOUS", "LATEST", "CHANGE"]
+        deductions_comparison.columns = ["PARTNER", "LATEST", "PREVIOUS", "CHANGE"]
 
         logger.info("Deductions comparison completed.")
         return deductions_comparison
@@ -316,6 +322,32 @@ def compare_deductions(sheet_previous, sheet_latest):
         logger.error(f"Error comparing deductions: {e}")
         raise
 
+def compare_os_operators(sheet_previous, sheet_latest):
+    try:
+        logger.info("Comparing OS Operators between previous and latest sheets.")
+
+        # Extract unique employee names and sort them
+        previous_values = sheet_previous[["Employee Name"]].drop_duplicates().rename(columns={"Employee Name": "PREVIOUS"}).sort_values(by="PREVIOUS")
+        latest_values = sheet_latest[["Employee Name"]].drop_duplicates().rename(columns={"Employee Name": "LATEST"}).sort_values(by="LATEST")
+
+        # Reset index to align properly
+        previous_values = previous_values.reset_index(drop=True)
+        latest_values = latest_values.reset_index(drop=True)
+
+        # Ensure both columns have the same length by padding with empty strings
+        max_length = max(len(previous_values), len(latest_values))
+        previous_values = previous_values.reindex(range(max_length), fill_value="")
+        latest_values = latest_values.reindex(range(max_length), fill_value="")
+
+        # Combine into a single DataFrame
+        comparison = pd.concat([previous_values, latest_values], axis=1)
+
+        logger.info("OS Operator comparison completed.")
+        return comparison
+
+    except Exception as e:
+        logger.error(f"Error comparing OS Operator: {e}")
+        raise
 
 def apply_formatting(sheet_name, wb):
     try:
@@ -386,7 +418,7 @@ def main(file_previous, file_latest):
         output_folder = "ComparedResults"
         os.makedirs(output_folder, exist_ok=True)
 
-        sheet_pr_previous, sheet_pr_latest, sheet_hours_previous, sheet_hours_latest, sheet_lease_previous, sheet_lease_latest = load_sheets(file_previous, file_latest)
+        sheet_pr_previous, sheet_pr_latest, sheet_hours_previous, sheet_hours_latest, sheet_lease_previous, sheet_lease_latest, sheet_OS_previous, sheet_OS_latest = load_sheets(file_previous, file_latest)
         # totals_previous = None
         # totals_latest = None
         # 2. Process the data for each client
@@ -398,7 +430,7 @@ def main(file_previous, file_latest):
             sheet_previous_client = sheet_hours_previous[sheet_hours_previous["CLIENT"] == client]
             sheet_latest_client = sheet_hours_latest[sheet_hours_latest["CLIENT"] == client]
             sheet_lease_previous_client = sheet_lease_previous[sheet_lease_previous["Type"] == client]
-            sheet_lease_latest_client = sheet_lease_previous[sheet_lease_previous["Type"] == client]
+            sheet_lease_latest_client = sheet_lease_latest[sheet_lease_latest["Type"] == client]
 
             # Recalculate totals for client
             totals_previous_client = calculate_client_totals(sheet_previous_client, sheet_pr_previous, client)
@@ -516,6 +548,9 @@ def main(file_previous, file_latest):
         trips_comparison_df, hours_comparison_df = compare_trips_and_hours(sheet_hours_previous, sheet_hours_latest)
         lease_comparison_df = compare_deductions(sheet_lease_previous, sheet_lease_latest)
 
+        # Find OS operators
+        os_operators_comparison_df = compare_os_operators(sheet_OS_previous, sheet_OS_latest)
+
         # Save the full comparison results
         full_comparison_file = os.path.join(output_folder, "Full_Comparison.xlsx")
         with pd.ExcelWriter(full_comparison_file, engine="openpyxl") as writer:
@@ -526,10 +561,11 @@ def main(file_previous, file_latest):
             lease_comparison_df.to_excel(writer, sheet_name="LeaseComparison", index=False)
             Doperator_changes_df.to_excel(writer, sheet_name="DatesComparison", index=False)
             missing_dates_df.to_excel(writer, sheet_name="MissingDates", index=False)
+            os_operators_comparison_df.to_excel(writer, sheet_name="OSOperators", index=False)
 
         # Apply formatting to the full comparison file
         wb_full = load_workbook(full_comparison_file)
-        for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison", "LeaseComparison", "DatesComparison", "MissingDates"]:
+        for sheet in ["Summary", "OperatorChanges", "TripsComparison", "HoursComparison", "LeaseComparison", "DatesComparison", "MissingDates", "OSOperators"]:
             apply_formatting(sheet, wb_full)
         wb_full.save(full_comparison_file)
         wb_full.close()

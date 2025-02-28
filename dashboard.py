@@ -72,6 +72,30 @@ def main(file_previous, file_latest):
             lat_full_days = f"{(sheet_summary['C5'].value):,}"
             diff_full_days = f"{float(sheet_summary['D5'].value):.0f}"
 
+            if sheet_name == 'Dashboard':
+                sheet_os_operators = wb_comparison['OSOperators']
+                
+                # Count non-empty values first (store as integers)
+                prev_OSOperators_count = sum(1 for row in sheet_os_operators.iter_rows(min_row=2, max_row=50, min_col=1, max_col=1) for cell in row if cell.value is not None)
+                lat_OSOperators_count = sum(1 for row in sheet_os_operators.iter_rows(min_row=2, max_row=50, min_col=2, max_col=2) for cell in row if cell.value is not None)
+                
+                # Calculate the difference as an integer
+                diff_OSOperators_count = lat_OSOperators_count - prev_OSOperators_count
+
+                # Format for display
+                prev_OSOperators = f"{prev_OSOperators_count:,}"
+                lat_OSOperators = f"{lat_OSOperators_count:,}"
+                diff_OSOperators = f"{diff_OSOperators_count:,}"
+
+                sheet_dashboard = wb_dashboard.sheets[sheet_name]
+                
+                # Access the ViolationComparison shape via the API and set the value
+                txt_OSOP = sheet_dashboard.shapes['txtDOSOPDiff'].api
+                txt_OSOP.TextFrame2.TextRange.Text = f"{prev_OSOperators} to {lat_OSOperators} operators"
+                
+                txt_OSOP_diff = sheet_dashboard.shapes['txtOSOPDiff'].api
+                txt_OSOP_diff.TextFrame2.TextRange.Text = f"{diff_OSOperators} operators"
+
             # Get the corresponding sheet in the dashboard
             sheet_dashboard = wb_dashboard.sheets[sheet_name]
 
@@ -138,6 +162,10 @@ def main(file_previous, file_latest):
                 textBoxNames = ["txtTripsDiff", "txtHoursDiff", "txtOpsDiff", "txtDaysDiff"]
                 values = [diff_full_trip_made, diff_full_hrs_op, diff_full_op, diff_full_days]
 
+                if sheet_name == 'Dashboard':
+                    textBoxNames.append("txtOSOPDiff")
+                    values.append(diff_OSOperators)
+
                 # Loop through the text boxes and update colors based on the values
                 for i, textBoxName in enumerate(textBoxNames):
                     wb_dashboard.macro("UpdateSummaryColor")(sheet_name, textBoxName, values[i])
@@ -175,11 +203,11 @@ def paste_picture():
     
     # Target cells for each sheet in the comparison file
     target_cells = {
-        'TripsComparison': (44, 15),
-        'HoursComparison': (44, 4),
-        'OperatorChanges': (12, 22),
-        'LeaseComparison': (44, 26),
-        'MissingDates': (12, 33)
+        'TripsComparison': (34, 11),
+        'HoursComparison': (34, 2),
+        'OperatorChanges': (5, 20),
+        'LeaseComparison': (34, 20),
+        'MissingDates': (5, 29)
     }
 
     relative_dashboard_path = "ComparedResults\\Dashboard.xlsm"
@@ -219,7 +247,10 @@ def paste_picture():
         for target_sheet_name in ['Dashboard', 'CCCTA', 'LAVTA']:
             ws_dashboard = wb_dashboard.Sheets(target_sheet_name)
             ws_dashboard.Activate()
-            for picture_name in ['TripsTable', 'HoursTable', 'OperatorTable', 'LeaseTable', 'DatesTable']:
+            picname = ['TripsTable', 'HoursTable', 'OperatorTable', 'LeaseTable', 'DatesTable']
+            if target_sheet_name == 'Dashboard':
+                picname = ['TripsTable', 'HoursTable', 'OperatorTable', 'LeaseTable', 'DatesTable', 'OSOPTable']
+            for picture_name in picname:
                 try:
                     ws_dashboard.Shapes(picture_name).Delete()  # Attempt to delete the picture
                     logger.info(f"Deleted existing picture: {picture_name} in {target_sheet_name}")
@@ -243,6 +274,24 @@ def paste_picture():
             if wb_comparison is None:
                 logger.info(f"Failed to open the comparison workbook at {comparison_file_path}")
                 continue
+
+            target_cells = {
+                'TripsComparison': (34, 11),
+                'HoursComparison': (34, 2),
+                'OperatorChanges': (5, 20),
+                'LeaseComparison': (34, 20),
+                'MissingDates': (5, 29)
+            }
+
+            if target_sheet_name == 'Dashboard':
+                target_cells = {
+                    'TripsComparison': (36, 11),
+                    'HoursComparison': (36, 2),
+                    'OperatorChanges': (5, 20),
+                    'LeaseComparison': (36, 20),
+                    'MissingDates': (5, 29),
+                    'OSOperators': (36, 29)
+                }
 
             # Process each sheet in the comparison file (TripsComparison, HoursComparison, OperatorChanges)
             for sheet_name, target_cell in target_cells.items():
@@ -301,6 +350,8 @@ def paste_picture():
                     pasted_picture.Name = 'LeaseTable'
                 elif sheet_name == 'MissingDates':
                     pasted_picture.Name = 'DatesTable'
+                elif sheet_name == 'OSOperators':
+                    pasted_picture.Name = 'OSOPTable'
 
                 table_name = pasted_picture.Name
                 logger.info(f"Table Name: {table_name}")
@@ -314,8 +365,8 @@ def paste_picture():
                     container_name = table_name.replace("Table", "Container")  # Match the container name
                     try:
                         container = ws_dashboard.Shapes(container_name)
-                        container.Width = table_width + 95  # Add 3.35 cm to width
-                        container.Height = table_height + 123  # Add 4.33 cm to height
+                        container.Width = table_width+3  # Add 3.35 cm to width
+                        container.Height = table_height + 56  # Add 4.33 cm to height
                         logger.info(f"Resized {container_name} to width: {(container.Width)*0.0352778:.2f} cm, height: {(container.Height)*0.0352778:.2f} cm")
                     except Exception as e:
                         logger.error(f"Failed to resize {container_name}: {e}")
