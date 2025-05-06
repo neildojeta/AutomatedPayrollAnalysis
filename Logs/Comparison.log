@@ -2097,3 +2097,567 @@
 2025-02-28 09:53:22,615 - INFO - 'DatesTable' successfully pasted in the MissingDates Sheet.
 2025-02-28 09:53:22,640 - INFO - Resized DatesContainer to width: 6.96 cm, height: 3.03 cm
 2025-02-28 09:53:23,994 - INFO - Data pasted as pictures successfully.
+2025-05-06 16:57:11,820 - INFO - Starting main comparison process.
+2025-05-06 16:57:11,821 - INFO - Loading sheets from the provided Excel files.
+2025-05-06 16:57:12,214 - INFO - Sheets loaded successfully.
+2025-05-06 16:57:12,218 - INFO - Found client header for CCCTA at row 3.
+2025-05-06 16:57:12,219 - INFO - Partner rows for client CCCTA are between rows 4 and 25.
+2025-05-06 16:57:12,219 - INFO - Total partners for CCCTA: 13
+2025-05-06 16:57:12,220 - INFO - Amount for partner EXPRESS TRANSPORTATION SERVICES, LLC: 22460.91168238095
+2025-05-06 16:57:12,221 - INFO - Amount for partner AARON TRANSPORTATION: 2996.1670075
+2025-05-06 16:57:12,221 - INFO - Amount for partner MONAI&SON'S LLC: 2466.5556083333336
+2025-05-06 16:57:12,222 - INFO - Amount for partner SYNERGY MEDICAL TRANSPORTATION LLC: 12701.628851228072
+2025-05-06 16:57:12,223 - INFO - Amount for partner QUICK RIDES CA: 4106.818131666667
+2025-05-06 16:57:12,223 - INFO - Amount for partner DIAMOND HILL TRANSPORTATION LLC: 3012.1477958333335
+2025-05-06 16:57:12,224 - INFO - Amount for partner TRANSIT LTM LLC: 1803.3593625000003
+2025-05-06 16:57:12,225 - INFO - Amount for partner HUGO FAMILY TRANSPORTATION: 2398.1740499999996
+2025-05-06 16:57:12,225 - INFO - Amount for partner GET CARE TRANSIT LLC: 738.3380666666667
+2025-05-06 16:57:12,226 - INFO - Amount for partner REM SOLUTIONS LLC: 2329.7390742105263
+2025-05-06 16:57:12,227 - INFO - Amount for partner HIGHER-SELF LLC: 2553.5844605263155
+2025-05-06 16:57:12,227 - INFO - Amount for partner NORTHCAL TRANSPORTATION LLC: 2180.199325833333
+2025-05-06 16:57:12,228 - INFO - Amount for partner FOWLER SENIOR TRANSIT LLC: 2817.5603410526323
+2025-05-06 16:57:12,228 - INFO - Total amount for client CCCTA: 62565.18375773182
+2025-05-06 16:57:12,229 - INFO - Found client header for CCCTA at row 3.
+2025-05-06 16:57:12,229 - INFO - Partner rows for client CCCTA are between rows 4 and 26.
+2025-05-06 16:57:12,229 - INFO - Total partners for CCCTA: 13
+2025-05-06 16:57:12,230 - INFO - Amount for partner EXPRESS TRANSPORTATION SERVICES, LLC: 0
+2025-05-06 16:57:12,231 - INFO - Amount for partner AARON TRANSPORTATION: 0
+2025-05-06 16:57:12,231 - INFO - Amount for partner SYNERGY MEDICAL TRANSPORTATION LLC: 0
+2025-05-06 16:57:12,232 - INFO - Amount for partner QUICK RIDES CA: 160
+2025-05-06 16:57:12,232 - INFO - Amount for partner DIAMOND HILL TRANSPORTATION LLC: 0
+2025-05-06 16:57:12,232 - INFO - Amount for partner TRANSIT LTM LLC: 0
+2025-05-06 16:57:12,233 - INFO - Amount for partner HUGO FAMILY TRANSPORTATION: 0
+2025-05-06 16:57:12,233 - INFO - Amount for partner GET CARE TRANSIT LLC: 0
+2025-05-06 16:57:12,234 - INFO - Amount for partner REM SOLUTIONS LLC: 0
+2025-05-06 16:57:12,234 - INFO - Amount for partner HIGHER-SELF LLC: 21
+2025-05-06 16:57:12,235 - INFO - Amount for partner NORTHCAL TRANSPORTATION LLC: 0
+2025-05-06 16:57:12,235 - INFO - Amount for partner MONAI&SON'S LLC: 0
+2025-05-06 16:57:12,236 - INFO - Amount for partner FOWLER SENIOR TRANSIT LLC: 0
+2025-05-06 16:57:12,236 - INFO - Total amount for client CCCTA: 181
+2025-05-06 16:57:12,237 - INFO - Comparing operators between previous and latest sheets.
+2025-05-06 16:57:12,238 - INFO - Operator comparison completed.
+2025-05-06 16:57:12,239 - INFO - Comparing dates between previous and latest sheets.
+2025-05-06 16:57:12,243 - INFO - Date comparison completed.
+2025-05-06 16:57:12,245 - INFO - Checking for missing dates in the consecutive range.
+2025-05-06 16:57:12,252 - INFO - Missing date check completed.
+2025-05-06 16:57:12,252 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-05-06 16:57:12,255 - INFO - Trips and hours comparison completed.
+2025-05-06 16:57:12,255 - INFO - Comparing Deductions between previous and latest sheets.
+2025-05-06 16:57:12,258 - INFO - Deductions comparison completed.
+2025-05-06 16:57:12,328 - INFO - Applying formatting to sheet: Summary.
+2025-05-06 16:57:12,329 - INFO - Formatting applied successfully to sheet: Summary.
+2025-05-06 16:57:12,329 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-05-06 16:57:12,330 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-05-06 16:57:12,330 - INFO - Applying formatting to sheet: TripsComparison.
+2025-05-06 16:57:12,334 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-05-06 16:57:12,334 - INFO - Applying formatting to sheet: HoursComparison.
+2025-05-06 16:57:12,337 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-05-06 16:57:12,338 - INFO - Applying formatting to sheet: LeaseComparison.
+2025-05-06 16:57:12,340 - INFO - Formatting applied successfully to sheet: LeaseComparison.
+2025-05-06 16:57:12,340 - INFO - Applying formatting to sheet: DatesComparison.
+2025-05-06 16:57:12,344 - INFO - Formatting applied successfully to sheet: DatesComparison.
+2025-05-06 16:57:12,344 - INFO - Applying formatting to sheet: MissingDates.
+2025-05-06 16:57:12,345 - INFO - Formatting applied successfully to sheet: MissingDates.
+2025-05-06 16:57:12,403 - INFO - Found client header for LAVTA at row 52.
+2025-05-06 16:57:12,403 - INFO - Partner rows for client LAVTA are between rows 53 and 123.
+2025-05-06 16:57:12,403 - INFO - Total partners for LAVTA: 9
+2025-05-06 16:57:12,404 - INFO - Amount for partner EXPRESS TRANSPORTATION SERVICES, LLC: 10238.431862142857
+2025-05-06 16:57:12,404 - INFO - Amount for partner SYNERGY MEDICAL TRANSPORTATION LLC: 4072.1549775000003
+2025-05-06 16:57:12,405 - INFO - Amount for partner QUICK RIDES CA: 424.83332666666666
+2025-05-06 16:57:12,405 - INFO - Amount for partner DIAMOND HILL TRANSPORTATION LLC: 68.16769333333335
+2025-05-06 16:57:12,406 - INFO - Amount for partner GET CARE TRANSIT LLC: 3336.6189091666665
+2025-05-06 16:57:12,406 - INFO - Amount for partner HIGHER-SELF LLC: 93.03579157894737
+2025-05-06 16:57:12,407 - INFO - Amount for partner BUFFINGTON TRANSPORTATION LLC: 2553.1879675
+2025-05-06 16:57:12,407 - INFO - Amount for partner NEMIA CARE LLC: 1923.755910833333
+2025-05-06 16:57:12,408 - INFO - Amount for partner TRI VALLEY TRANSPORTATION INC.: 2040.30389
+2025-05-06 16:57:12,408 - INFO - Total amount for client LAVTA: 24750.490328721804
+2025-05-06 16:57:12,409 - INFO - Found client header for LAVTA at row 52.
+2025-05-06 16:57:12,409 - INFO - Partner rows for client LAVTA are between rows 53 and 124.
+2025-05-06 16:57:12,409 - INFO - Total partners for LAVTA: 13
+2025-05-06 16:57:12,410 - INFO - Amount for partner EXPRESS TRANSPORTATION SERVICES, LLC: nan
+2025-05-06 16:57:12,411 - INFO - Amount for partner AARON TRANSPORTATION: nan
+2025-05-06 16:57:12,411 - INFO - Amount for partner SYNERGY MEDICAL TRANSPORTATION LLC: nan
+2025-05-06 16:57:12,412 - INFO - Amount for partner QUICK RIDES CA: nan
+2025-05-06 16:57:12,413 - INFO - Amount for partner DIAMOND HILL TRANSPORTATION LLC: nan
+2025-05-06 16:57:12,413 - INFO - Amount for partner HUGO FAMILY TRANSPORTATION: nan
+2025-05-06 16:57:12,414 - INFO - Amount for partner GET CARE TRANSIT LLC: nan
+2025-05-06 16:57:12,414 - INFO - Amount for partner NORTHCAL TRANSPORTATION LLC: nan
+2025-05-06 16:57:12,415 - INFO - Amount for partner MONAI&SON'S LLC: nan
+2025-05-06 16:57:12,415 - INFO - Amount for partner FOWLER SENIOR TRANSIT LLC: nan
+2025-05-06 16:57:12,416 - INFO - Amount for partner BUFFINGTON TRANSPORTATION LLC: nan
+2025-05-06 16:57:12,416 - INFO - Amount for partner NEMIA CARE LLC: nan
+2025-05-06 16:57:12,417 - INFO - Amount for partner TRI VALLEY TRANSPORTATION INC.: nan
+2025-05-06 16:57:12,417 - INFO - Total amount for client LAVTA: nan
+2025-05-06 16:57:12,417 - INFO - Comparing operators between previous and latest sheets.
+2025-05-06 16:57:12,419 - INFO - Operator comparison completed.
+2025-05-06 16:57:12,420 - INFO - Comparing dates between previous and latest sheets.
+2025-05-06 16:57:12,420 - INFO - Date comparison completed.
+2025-05-06 16:57:12,421 - INFO - Checking for missing dates in the consecutive range.
+2025-05-06 16:57:12,422 - INFO - Missing date check completed.
+2025-05-06 16:57:12,422 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-05-06 16:57:12,426 - INFO - Trips and hours comparison completed.
+2025-05-06 16:57:12,426 - INFO - Comparing Deductions between previous and latest sheets.
+2025-05-06 16:57:12,428 - INFO - Deductions comparison completed.
+2025-05-06 16:57:12,490 - INFO - Applying formatting to sheet: Summary.
+2025-05-06 16:57:12,491 - INFO - Formatting applied successfully to sheet: Summary.
+2025-05-06 16:57:12,491 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-05-06 16:57:12,493 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-05-06 16:57:12,493 - INFO - Applying formatting to sheet: TripsComparison.
+2025-05-06 16:57:12,496 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-05-06 16:57:12,496 - INFO - Applying formatting to sheet: HoursComparison.
+2025-05-06 16:57:12,499 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-05-06 16:57:12,499 - INFO - Applying formatting to sheet: LeaseComparison.
+2025-05-06 16:57:12,500 - INFO - Formatting applied successfully to sheet: LeaseComparison.
+2025-05-06 16:57:12,501 - INFO - Applying formatting to sheet: DatesComparison.
+2025-05-06 16:57:12,503 - INFO - Formatting applied successfully to sheet: DatesComparison.
+2025-05-06 16:57:12,503 - INFO - Applying formatting to sheet: MissingDates.
+2025-05-06 16:57:12,503 - INFO - Formatting applied successfully to sheet: MissingDates.
+2025-05-06 16:57:12,550 - INFO - Unique clients: {'LAVTA', 'CCCTA'}
+2025-05-06 16:57:12,561 - INFO - Total amount for client CCCTA: 62565.18375773182
+2025-05-06 16:57:12,561 - INFO - Total calculated mamount:87315.67408645363
+2025-05-06 16:57:12,561 - INFO - Unique clients: {'LAVTA', 'CCCTA'}
+2025-05-06 16:57:12,570 - INFO - Total amount for client CCCTA: 181
+2025-05-06 16:57:12,570 - INFO - Total calculated mamount:nan
+2025-05-06 16:57:12,571 - INFO - Comparing operators between previous and latest sheets.
+2025-05-06 16:57:12,572 - INFO - Operator comparison completed.
+2025-05-06 16:57:12,573 - INFO - Comparing dates between previous and latest sheets.
+2025-05-06 16:57:12,573 - INFO - Date comparison completed.
+2025-05-06 16:57:12,574 - INFO - Checking for missing dates in the consecutive range.
+2025-05-06 16:57:12,577 - INFO - Missing date check completed.
+2025-05-06 16:57:12,577 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-05-06 16:57:12,580 - INFO - Trips and hours comparison completed.
+2025-05-06 16:57:12,580 - INFO - Comparing Deductions between previous and latest sheets.
+2025-05-06 16:57:12,582 - INFO - Deductions comparison completed.
+2025-05-06 16:57:12,582 - INFO - Comparing OS Operators between previous and latest sheets.
+2025-05-06 16:57:12,584 - INFO - OS Operator comparison completed.
+2025-05-06 16:57:12,651 - INFO - Applying formatting to sheet: Summary.
+2025-05-06 16:57:12,652 - INFO - Formatting applied successfully to sheet: Summary.
+2025-05-06 16:57:12,652 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-05-06 16:57:12,653 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-05-06 16:57:12,653 - INFO - Applying formatting to sheet: TripsComparison.
+2025-05-06 16:57:12,656 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-05-06 16:57:12,656 - INFO - Applying formatting to sheet: HoursComparison.
+2025-05-06 16:57:12,660 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-05-06 16:57:12,660 - INFO - Applying formatting to sheet: LeaseComparison.
+2025-05-06 16:57:12,662 - INFO - Formatting applied successfully to sheet: LeaseComparison.
+2025-05-06 16:57:12,663 - INFO - Applying formatting to sheet: DatesComparison.
+2025-05-06 16:57:12,666 - INFO - Formatting applied successfully to sheet: DatesComparison.
+2025-05-06 16:57:12,666 - INFO - Applying formatting to sheet: MissingDates.
+2025-05-06 16:57:12,666 - INFO - Formatting applied successfully to sheet: MissingDates.
+2025-05-06 16:57:12,666 - INFO - Applying formatting to sheet: OSOperators.
+2025-05-06 16:57:12,668 - INFO - Formatting applied successfully to sheet: OSOperators.
+2025-05-06 16:57:12,725 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-05-06 16:57:14,726 - INFO - VDP_DIV5_0324_0406 FINAL.xlsm + VDP_DIV5_0407_0420 FINAL.xlsm
+2025-05-06 16:57:16,031 - INFO - An error occurred: float() argument must be a string or a real number, not 'NoneType'
+2025-05-06 16:58:09,487 - INFO - Starting main comparison process.
+2025-05-06 16:58:09,488 - INFO - Loading sheets from the provided Excel files.
+2025-05-06 16:58:09,872 - INFO - Sheets loaded successfully.
+2025-05-06 16:58:09,876 - INFO - Found client header for CCCTA at row 3.
+2025-05-06 16:58:09,877 - INFO - Partner rows for client CCCTA are between rows 4 and 25.
+2025-05-06 16:58:09,877 - INFO - Total partners for CCCTA: 13
+2025-05-06 16:58:09,878 - INFO - Amount for partner EXPRESS TRANSPORTATION SERVICES, LLC: 22460.91168238095
+2025-05-06 16:58:09,879 - INFO - Amount for partner AARON TRANSPORTATION: 2996.1670075
+2025-05-06 16:58:09,879 - INFO - Amount for partner MONAI&SON'S LLC: 2466.5556083333336
+2025-05-06 16:58:09,880 - INFO - Amount for partner SYNERGY MEDICAL TRANSPORTATION LLC: 12701.628851228072
+2025-05-06 16:58:09,881 - INFO - Amount for partner QUICK RIDES CA: 4106.818131666667
+2025-05-06 16:58:09,881 - INFO - Amount for partner DIAMOND HILL TRANSPORTATION LLC: 3012.1477958333335
+2025-05-06 16:58:09,882 - INFO - Amount for partner TRANSIT LTM LLC: 1803.3593625000003
+2025-05-06 16:58:09,882 - INFO - Amount for partner HUGO FAMILY TRANSPORTATION: 2398.1740499999996
+2025-05-06 16:58:09,883 - INFO - Amount for partner GET CARE TRANSIT LLC: 738.3380666666667
+2025-05-06 16:58:09,883 - INFO - Amount for partner REM SOLUTIONS LLC: 2329.7390742105263
+2025-05-06 16:58:09,884 - INFO - Amount for partner HIGHER-SELF LLC: 2553.5844605263155
+2025-05-06 16:58:09,884 - INFO - Amount for partner NORTHCAL TRANSPORTATION LLC: 2180.199325833333
+2025-05-06 16:58:09,885 - INFO - Amount for partner FOWLER SENIOR TRANSIT LLC: 2817.5603410526323
+2025-05-06 16:58:09,885 - INFO - Total amount for client CCCTA: 62565.18375773182
+2025-05-06 16:58:09,886 - INFO - Found client header for CCCTA at row 3.
+2025-05-06 16:58:09,886 - INFO - Partner rows for client CCCTA are between rows 4 and 26.
+2025-05-06 16:58:09,887 - INFO - Total partners for CCCTA: 13
+2025-05-06 16:58:09,887 - INFO - Amount for partner EXPRESS TRANSPORTATION SERVICES, LLC: 0
+2025-05-06 16:58:09,888 - INFO - Amount for partner AARON TRANSPORTATION: 0
+2025-05-06 16:58:09,888 - INFO - Amount for partner SYNERGY MEDICAL TRANSPORTATION LLC: 0
+2025-05-06 16:58:09,889 - INFO - Amount for partner QUICK RIDES CA: 160
+2025-05-06 16:58:09,890 - INFO - Amount for partner DIAMOND HILL TRANSPORTATION LLC: 0
+2025-05-06 16:58:09,891 - INFO - Amount for partner TRANSIT LTM LLC: 0
+2025-05-06 16:58:09,891 - INFO - Amount for partner HUGO FAMILY TRANSPORTATION: 0
+2025-05-06 16:58:09,892 - INFO - Amount for partner GET CARE TRANSIT LLC: 0
+2025-05-06 16:58:09,892 - INFO - Amount for partner REM SOLUTIONS LLC: 0
+2025-05-06 16:58:09,893 - INFO - Amount for partner HIGHER-SELF LLC: 21
+2025-05-06 16:58:09,894 - INFO - Amount for partner NORTHCAL TRANSPORTATION LLC: 0
+2025-05-06 16:58:09,895 - INFO - Amount for partner MONAI&SON'S LLC: 0
+2025-05-06 16:58:09,895 - INFO - Amount for partner FOWLER SENIOR TRANSIT LLC: 0
+2025-05-06 16:58:09,895 - INFO - Total amount for client CCCTA: 181
+2025-05-06 16:58:09,896 - INFO - Comparing operators between previous and latest sheets.
+2025-05-06 16:58:09,898 - INFO - Operator comparison completed.
+2025-05-06 16:58:09,899 - INFO - Comparing dates between previous and latest sheets.
+2025-05-06 16:58:09,900 - INFO - Date comparison completed.
+2025-05-06 16:58:09,901 - INFO - Checking for missing dates in the consecutive range.
+2025-05-06 16:58:09,904 - INFO - Missing date check completed.
+2025-05-06 16:58:09,904 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-05-06 16:58:09,908 - INFO - Trips and hours comparison completed.
+2025-05-06 16:58:09,909 - INFO - Comparing Deductions between previous and latest sheets.
+2025-05-06 16:58:09,911 - INFO - Deductions comparison completed.
+2025-05-06 16:58:09,960 - INFO - Applying formatting to sheet: Summary.
+2025-05-06 16:58:09,961 - INFO - Formatting applied successfully to sheet: Summary.
+2025-05-06 16:58:09,961 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-05-06 16:58:09,962 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-05-06 16:58:09,962 - INFO - Applying formatting to sheet: TripsComparison.
+2025-05-06 16:58:09,967 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-05-06 16:58:09,967 - INFO - Applying formatting to sheet: HoursComparison.
+2025-05-06 16:58:09,970 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-05-06 16:58:09,970 - INFO - Applying formatting to sheet: LeaseComparison.
+2025-05-06 16:58:09,972 - INFO - Formatting applied successfully to sheet: LeaseComparison.
+2025-05-06 16:58:09,972 - INFO - Applying formatting to sheet: DatesComparison.
+2025-05-06 16:58:09,975 - INFO - Formatting applied successfully to sheet: DatesComparison.
+2025-05-06 16:58:09,976 - INFO - Applying formatting to sheet: MissingDates.
+2025-05-06 16:58:09,976 - INFO - Formatting applied successfully to sheet: MissingDates.
+2025-05-06 16:58:10,005 - INFO - Found client header for LAVTA at row 52.
+2025-05-06 16:58:10,005 - INFO - Partner rows for client LAVTA are between rows 53 and 123.
+2025-05-06 16:58:10,005 - INFO - Total partners for LAVTA: 9
+2025-05-06 16:58:10,006 - INFO - Amount for partner EXPRESS TRANSPORTATION SERVICES, LLC: 10238.431862142857
+2025-05-06 16:58:10,007 - INFO - Amount for partner SYNERGY MEDICAL TRANSPORTATION LLC: 4072.1549775000003
+2025-05-06 16:58:10,007 - INFO - Amount for partner QUICK RIDES CA: 424.83332666666666
+2025-05-06 16:58:10,008 - INFO - Amount for partner DIAMOND HILL TRANSPORTATION LLC: 68.16769333333335
+2025-05-06 16:58:10,008 - INFO - Amount for partner GET CARE TRANSIT LLC: 3336.6189091666665
+2025-05-06 16:58:10,009 - INFO - Amount for partner HIGHER-SELF LLC: 93.03579157894737
+2025-05-06 16:58:10,009 - INFO - Amount for partner BUFFINGTON TRANSPORTATION LLC: 2553.1879675
+2025-05-06 16:58:10,010 - INFO - Amount for partner NEMIA CARE LLC: 1923.755910833333
+2025-05-06 16:58:10,010 - INFO - Amount for partner TRI VALLEY TRANSPORTATION INC.: 2040.30389
+2025-05-06 16:58:10,010 - INFO - Total amount for client LAVTA: 24750.490328721804
+2025-05-06 16:58:10,011 - INFO - Found client header for LAVTA at row 52.
+2025-05-06 16:58:10,011 - INFO - Partner rows for client LAVTA are between rows 53 and 124.
+2025-05-06 16:58:10,012 - INFO - Total partners for LAVTA: 13
+2025-05-06 16:58:10,012 - INFO - Amount for partner EXPRESS TRANSPORTATION SERVICES, LLC: nan
+2025-05-06 16:58:10,013 - INFO - Amount for partner AARON TRANSPORTATION: nan
+2025-05-06 16:58:10,013 - INFO - Amount for partner SYNERGY MEDICAL TRANSPORTATION LLC: nan
+2025-05-06 16:58:10,014 - INFO - Amount for partner QUICK RIDES CA: nan
+2025-05-06 16:58:10,014 - INFO - Amount for partner DIAMOND HILL TRANSPORTATION LLC: nan
+2025-05-06 16:58:10,015 - INFO - Amount for partner HUGO FAMILY TRANSPORTATION: nan
+2025-05-06 16:58:10,015 - INFO - Amount for partner GET CARE TRANSIT LLC: nan
+2025-05-06 16:58:10,015 - INFO - Amount for partner NORTHCAL TRANSPORTATION LLC: nan
+2025-05-06 16:58:10,016 - INFO - Amount for partner MONAI&SON'S LLC: nan
+2025-05-06 16:58:10,016 - INFO - Amount for partner FOWLER SENIOR TRANSIT LLC: nan
+2025-05-06 16:58:10,017 - INFO - Amount for partner BUFFINGTON TRANSPORTATION LLC: nan
+2025-05-06 16:58:10,017 - INFO - Amount for partner NEMIA CARE LLC: nan
+2025-05-06 16:58:10,018 - INFO - Amount for partner TRI VALLEY TRANSPORTATION INC.: nan
+2025-05-06 16:58:10,018 - INFO - Total amount for client LAVTA: nan
+2025-05-06 16:58:10,019 - INFO - Comparing operators between previous and latest sheets.
+2025-05-06 16:58:10,020 - INFO - Operator comparison completed.
+2025-05-06 16:58:10,021 - INFO - Comparing dates between previous and latest sheets.
+2025-05-06 16:58:10,021 - INFO - Date comparison completed.
+2025-05-06 16:58:10,023 - INFO - Checking for missing dates in the consecutive range.
+2025-05-06 16:58:10,024 - INFO - Missing date check completed.
+2025-05-06 16:58:10,024 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-05-06 16:58:10,028 - INFO - Trips and hours comparison completed.
+2025-05-06 16:58:10,028 - INFO - Comparing Deductions between previous and latest sheets.
+2025-05-06 16:58:10,030 - INFO - Deductions comparison completed.
+2025-05-06 16:58:10,075 - INFO - Applying formatting to sheet: Summary.
+2025-05-06 16:58:10,077 - INFO - Formatting applied successfully to sheet: Summary.
+2025-05-06 16:58:10,077 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-05-06 16:58:10,079 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-05-06 16:58:10,079 - INFO - Applying formatting to sheet: TripsComparison.
+2025-05-06 16:58:10,081 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-05-06 16:58:10,081 - INFO - Applying formatting to sheet: HoursComparison.
+2025-05-06 16:58:10,084 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-05-06 16:58:10,084 - INFO - Applying formatting to sheet: LeaseComparison.
+2025-05-06 16:58:10,085 - INFO - Formatting applied successfully to sheet: LeaseComparison.
+2025-05-06 16:58:10,085 - INFO - Applying formatting to sheet: DatesComparison.
+2025-05-06 16:58:10,088 - INFO - Formatting applied successfully to sheet: DatesComparison.
+2025-05-06 16:58:10,088 - INFO - Applying formatting to sheet: MissingDates.
+2025-05-06 16:58:10,088 - INFO - Formatting applied successfully to sheet: MissingDates.
+2025-05-06 16:58:10,113 - INFO - Unique clients: {'CCCTA', 'LAVTA'}
+2025-05-06 16:58:10,124 - INFO - Total amount for client LAVTA: 24750.490328721804
+2025-05-06 16:58:10,124 - INFO - Total calculated mamount:87315.67408645363
+2025-05-06 16:58:10,125 - INFO - Unique clients: {'CCCTA', 'LAVTA'}
+2025-05-06 16:58:10,133 - INFO - Total amount for client LAVTA: 17338.692862825817
+2025-05-06 16:58:10,134 - INFO - Total calculated mamount:74223.82618523184
+2025-05-06 16:58:10,134 - INFO - Comparing operators between previous and latest sheets.
+2025-05-06 16:58:10,136 - INFO - Operator comparison completed.
+2025-05-06 16:58:10,137 - INFO - Comparing dates between previous and latest sheets.
+2025-05-06 16:58:10,137 - INFO - Date comparison completed.
+2025-05-06 16:58:10,138 - INFO - Checking for missing dates in the consecutive range.
+2025-05-06 16:58:10,140 - INFO - Missing date check completed.
+2025-05-06 16:58:10,140 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-05-06 16:58:10,143 - INFO - Trips and hours comparison completed.
+2025-05-06 16:58:10,143 - INFO - Comparing Deductions between previous and latest sheets.
+2025-05-06 16:58:10,145 - INFO - Deductions comparison completed.
+2025-05-06 16:58:10,146 - INFO - Comparing OS Operators between previous and latest sheets.
+2025-05-06 16:58:10,147 - INFO - OS Operator comparison completed.
+2025-05-06 16:58:10,199 - INFO - Applying formatting to sheet: Summary.
+2025-05-06 16:58:10,201 - INFO - Formatting applied successfully to sheet: Summary.
+2025-05-06 16:58:10,201 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-05-06 16:58:10,201 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-05-06 16:58:10,201 - INFO - Applying formatting to sheet: TripsComparison.
+2025-05-06 16:58:10,204 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-05-06 16:58:10,204 - INFO - Applying formatting to sheet: HoursComparison.
+2025-05-06 16:58:10,208 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-05-06 16:58:10,208 - INFO - Applying formatting to sheet: LeaseComparison.
+2025-05-06 16:58:10,210 - INFO - Formatting applied successfully to sheet: LeaseComparison.
+2025-05-06 16:58:10,210 - INFO - Applying formatting to sheet: DatesComparison.
+2025-05-06 16:58:10,213 - INFO - Formatting applied successfully to sheet: DatesComparison.
+2025-05-06 16:58:10,213 - INFO - Applying formatting to sheet: MissingDates.
+2025-05-06 16:58:10,214 - INFO - Formatting applied successfully to sheet: MissingDates.
+2025-05-06 16:58:10,214 - INFO - Applying formatting to sheet: OSOperators.
+2025-05-06 16:58:10,216 - INFO - Formatting applied successfully to sheet: OSOperators.
+2025-05-06 16:58:10,245 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-05-06 16:58:12,246 - INFO - VDP_DIV5_0324_0406 FINAL.xlsm + VDP_DIV5_0407_0420 FINAL.xlsm
+2025-05-06 16:58:13,563 - INFO - Successfully updated color for TextBox 90 with status 'Decreased'.
+2025-05-06 16:58:13,576 - INFO - Successfully updated color for txtTripsDiff with value '-208'.
+2025-05-06 16:58:13,591 - INFO - Successfully updated color for txtHoursDiff with value '-213'.
+2025-05-06 16:58:13,605 - INFO - Successfully updated color for txtOpsDiff with value '0'.
+2025-05-06 16:58:13,612 - INFO - Successfully updated color for txtDaysDiff with value '0'.
+2025-05-06 16:58:13,625 - INFO - Successfully updated color for txtOSOPDiff with value '-1'.
+2025-05-06 16:58:13,696 - INFO - Successfully updated color for TextBox 90 with status 'Decreased'.
+2025-05-06 16:58:13,697 - INFO - Successfully updated color for txtTripsDiff with value '-122'.
+2025-05-06 16:58:13,699 - INFO - Successfully updated color for txtHoursDiff with value '-223'.
+2025-05-06 16:58:13,700 - INFO - Successfully updated color for txtOpsDiff with value '-1'.
+2025-05-06 16:58:13,701 - INFO - Successfully updated color for txtDaysDiff with value '0'.
+2025-05-06 16:58:13,715 - INFO - An error occurred: float() argument must be a string or a real number, not 'NoneType'
+2025-05-06 16:59:34,363 - INFO - Starting main comparison process.
+2025-05-06 16:59:34,363 - INFO - Loading sheets from the provided Excel files.
+2025-05-06 16:59:34,768 - INFO - Sheets loaded successfully.
+2025-05-06 16:59:34,770 - INFO - Found client header for CCCTA at row 3.
+2025-05-06 16:59:34,771 - INFO - Partner rows for client CCCTA are between rows 4 and 25.
+2025-05-06 16:59:34,771 - INFO - Total partners for CCCTA: 13
+2025-05-06 16:59:34,772 - INFO - Amount for partner EXPRESS TRANSPORTATION SERVICES, LLC: 22460.91168238095
+2025-05-06 16:59:34,772 - INFO - Amount for partner AARON TRANSPORTATION: 2996.1670075
+2025-05-06 16:59:34,773 - INFO - Amount for partner MONAI&SON'S LLC: 2466.5556083333336
+2025-05-06 16:59:34,773 - INFO - Amount for partner SYNERGY MEDICAL TRANSPORTATION LLC: 12701.628851228072
+2025-05-06 16:59:34,774 - INFO - Amount for partner QUICK RIDES CA: 4106.818131666667
+2025-05-06 16:59:34,774 - INFO - Amount for partner DIAMOND HILL TRANSPORTATION LLC: 3012.1477958333335
+2025-05-06 16:59:34,775 - INFO - Amount for partner TRANSIT LTM LLC: 1803.3593625000003
+2025-05-06 16:59:34,776 - INFO - Amount for partner HUGO FAMILY TRANSPORTATION: 2398.1740499999996
+2025-05-06 16:59:34,776 - INFO - Amount for partner GET CARE TRANSIT LLC: 738.3380666666667
+2025-05-06 16:59:34,777 - INFO - Amount for partner REM SOLUTIONS LLC: 2329.7390742105263
+2025-05-06 16:59:34,777 - INFO - Amount for partner HIGHER-SELF LLC: 2553.5844605263155
+2025-05-06 16:59:34,778 - INFO - Amount for partner NORTHCAL TRANSPORTATION LLC: 2180.199325833333
+2025-05-06 16:59:34,778 - INFO - Amount for partner FOWLER SENIOR TRANSIT LLC: 2817.5603410526323
+2025-05-06 16:59:34,779 - INFO - Total amount for client CCCTA: 62565.18375773182
+2025-05-06 16:59:34,779 - INFO - Found client header for CCCTA at row 3.
+2025-05-06 16:59:34,780 - INFO - Partner rows for client CCCTA are between rows 4 and 26.
+2025-05-06 16:59:34,780 - INFO - Total partners for CCCTA: 13
+2025-05-06 16:59:34,780 - INFO - Amount for partner EXPRESS TRANSPORTATION SERVICES, LLC: 22037.467481309526
+2025-05-06 16:59:34,781 - INFO - Amount for partner AARON TRANSPORTATION: 2189.368434166667
+2025-05-06 16:59:34,782 - INFO - Amount for partner SYNERGY MEDICAL TRANSPORTATION LLC: 8480.201008245613
+2025-05-06 16:59:34,782 - INFO - Amount for partner QUICK RIDES CA: 6184.427278333333
+2025-05-06 16:59:34,783 - INFO - Amount for partner DIAMOND HILL TRANSPORTATION LLC: 2732.9699425
+2025-05-06 16:59:34,783 - INFO - Amount for partner TRANSIT LTM LLC: 2988.3173699999998
+2025-05-06 16:59:34,784 - INFO - Amount for partner HUGO FAMILY TRANSPORTATION: 235.36888
+2025-05-06 16:59:34,784 - INFO - Amount for partner GET CARE TRANSIT LLC: 257.1642283333333
+2025-05-06 16:59:34,784 - INFO - Amount for partner REM SOLUTIONS LLC: 3805.932724736842
+2025-05-06 16:59:34,785 - INFO - Amount for partner HIGHER-SELF LLC: 3065.4938689473684
+2025-05-06 16:59:34,786 - INFO - Amount for partner NORTHCAL TRANSPORTATION LLC: 1274.3754258333333
+2025-05-06 16:59:34,786 - INFO - Amount for partner MONAI&SON'S LLC: 2630.7897068421057
+2025-05-06 16:59:34,787 - INFO - Amount for partner FOWLER SENIOR TRANSIT LLC: 1003.2569731578949
+2025-05-06 16:59:34,787 - INFO - Total amount for client CCCTA: 56885.13332240602
+2025-05-06 16:59:34,788 - INFO - Comparing operators between previous and latest sheets.
+2025-05-06 16:59:34,789 - INFO - Operator comparison completed.
+2025-05-06 16:59:34,790 - INFO - Comparing dates between previous and latest sheets.
+2025-05-06 16:59:34,791 - INFO - Date comparison completed.
+2025-05-06 16:59:34,792 - INFO - Checking for missing dates in the consecutive range.
+2025-05-06 16:59:34,794 - INFO - Missing date check completed.
+2025-05-06 16:59:34,794 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-05-06 16:59:34,797 - INFO - Trips and hours comparison completed.
+2025-05-06 16:59:34,797 - INFO - Comparing Deductions between previous and latest sheets.
+2025-05-06 16:59:34,799 - INFO - Deductions comparison completed.
+2025-05-06 16:59:34,844 - INFO - Applying formatting to sheet: Summary.
+2025-05-06 16:59:34,846 - INFO - Formatting applied successfully to sheet: Summary.
+2025-05-06 16:59:34,846 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-05-06 16:59:34,846 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-05-06 16:59:34,847 - INFO - Applying formatting to sheet: TripsComparison.
+2025-05-06 16:59:34,850 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-05-06 16:59:34,851 - INFO - Applying formatting to sheet: HoursComparison.
+2025-05-06 16:59:34,853 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-05-06 16:59:34,853 - INFO - Applying formatting to sheet: LeaseComparison.
+2025-05-06 16:59:34,855 - INFO - Formatting applied successfully to sheet: LeaseComparison.
+2025-05-06 16:59:34,855 - INFO - Applying formatting to sheet: DatesComparison.
+2025-05-06 16:59:34,858 - INFO - Formatting applied successfully to sheet: DatesComparison.
+2025-05-06 16:59:34,858 - INFO - Applying formatting to sheet: MissingDates.
+2025-05-06 16:59:34,858 - INFO - Formatting applied successfully to sheet: MissingDates.
+2025-05-06 16:59:34,889 - INFO - Found client header for LAVTA at row 52.
+2025-05-06 16:59:34,890 - INFO - Partner rows for client LAVTA are between rows 53 and 123.
+2025-05-06 16:59:34,890 - INFO - Total partners for LAVTA: 9
+2025-05-06 16:59:34,891 - INFO - Amount for partner EXPRESS TRANSPORTATION SERVICES, LLC: 10238.431862142857
+2025-05-06 16:59:34,891 - INFO - Amount for partner SYNERGY MEDICAL TRANSPORTATION LLC: 4072.1549775000003
+2025-05-06 16:59:34,892 - INFO - Amount for partner QUICK RIDES CA: 424.83332666666666
+2025-05-06 16:59:34,892 - INFO - Amount for partner DIAMOND HILL TRANSPORTATION LLC: 68.16769333333335
+2025-05-06 16:59:34,892 - INFO - Amount for partner GET CARE TRANSIT LLC: 3336.6189091666665
+2025-05-06 16:59:34,893 - INFO - Amount for partner HIGHER-SELF LLC: 93.03579157894737
+2025-05-06 16:59:34,893 - INFO - Amount for partner BUFFINGTON TRANSPORTATION LLC: 2553.1879675
+2025-05-06 16:59:34,894 - INFO - Amount for partner NEMIA CARE LLC: 1923.755910833333
+2025-05-06 16:59:34,894 - INFO - Amount for partner TRI VALLEY TRANSPORTATION INC.: 2040.30389
+2025-05-06 16:59:34,894 - INFO - Total amount for client LAVTA: 24750.490328721804
+2025-05-06 16:59:34,895 - INFO - Found client header for LAVTA at row 52.
+2025-05-06 16:59:34,895 - INFO - Partner rows for client LAVTA are between rows 53 and 124.
+2025-05-06 16:59:34,895 - INFO - Total partners for LAVTA: 13
+2025-05-06 16:59:34,896 - INFO - Amount for partner EXPRESS TRANSPORTATION SERVICES, LLC: 11369.894851904764
+2025-05-06 16:59:34,896 - INFO - Amount for partner AARON TRANSPORTATION: 397.86499583333335
+2025-05-06 16:59:34,897 - INFO - Amount for partner SYNERGY MEDICAL TRANSPORTATION LLC: 5582.104774605264
+2025-05-06 16:59:34,897 - INFO - Amount for partner QUICK RIDES CA: 64.75
+2025-05-06 16:59:34,898 - INFO - Amount for partner DIAMOND HILL TRANSPORTATION LLC: 396.91453333333334
+2025-05-06 16:59:34,898 - INFO - Amount for partner HUGO FAMILY TRANSPORTATION: 125.52604666666667
+2025-05-06 16:59:34,899 - INFO - Amount for partner GET CARE TRANSIT LLC: 3545.8974858333336
+2025-05-06 16:59:34,899 - INFO - Amount for partner NORTHCAL TRANSPORTATION LLC: 1048.5861433333332
+2025-05-06 16:59:34,900 - INFO - Amount for partner MONAI&SON'S LLC: 63.79298052631579
+2025-05-06 16:59:34,900 - INFO - Amount for partner FOWLER SENIOR TRANSIT LLC: 178.3627857894737
+2025-05-06 16:59:34,901 - INFO - Amount for partner BUFFINGTON TRANSPORTATION LLC: 1298.1609141666665
+2025-05-06 16:59:34,901 - INFO - Amount for partner NEMIA CARE LLC: -292.8211491666668
+2025-05-06 16:59:34,902 - INFO - Amount for partner TRI VALLEY TRANSPORTATION INC.: -6440.3415
+2025-05-06 16:59:34,902 - INFO - Total amount for client LAVTA: 17338.692862825817
+2025-05-06 16:59:34,902 - INFO - Comparing operators between previous and latest sheets.
+2025-05-06 16:59:34,904 - INFO - Operator comparison completed.
+2025-05-06 16:59:34,905 - INFO - Comparing dates between previous and latest sheets.
+2025-05-06 16:59:34,905 - INFO - Date comparison completed.
+2025-05-06 16:59:34,906 - INFO - Checking for missing dates in the consecutive range.
+2025-05-06 16:59:34,907 - INFO - Missing date check completed.
+2025-05-06 16:59:34,907 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-05-06 16:59:34,910 - INFO - Trips and hours comparison completed.
+2025-05-06 16:59:34,911 - INFO - Comparing Deductions between previous and latest sheets.
+2025-05-06 16:59:34,912 - INFO - Deductions comparison completed.
+2025-05-06 16:59:34,962 - INFO - Applying formatting to sheet: Summary.
+2025-05-06 16:59:34,964 - INFO - Formatting applied successfully to sheet: Summary.
+2025-05-06 16:59:34,964 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-05-06 16:59:34,966 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-05-06 16:59:34,966 - INFO - Applying formatting to sheet: TripsComparison.
+2025-05-06 16:59:34,968 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-05-06 16:59:34,968 - INFO - Applying formatting to sheet: HoursComparison.
+2025-05-06 16:59:34,971 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-05-06 16:59:34,971 - INFO - Applying formatting to sheet: LeaseComparison.
+2025-05-06 16:59:34,972 - INFO - Formatting applied successfully to sheet: LeaseComparison.
+2025-05-06 16:59:34,972 - INFO - Applying formatting to sheet: DatesComparison.
+2025-05-06 16:59:34,974 - INFO - Formatting applied successfully to sheet: DatesComparison.
+2025-05-06 16:59:34,975 - INFO - Applying formatting to sheet: MissingDates.
+2025-05-06 16:59:34,975 - INFO - Formatting applied successfully to sheet: MissingDates.
+2025-05-06 16:59:35,010 - INFO - Unique clients: {'CCCTA', 'LAVTA'}
+2025-05-06 16:59:35,019 - INFO - Total amount for client LAVTA: 24750.490328721804
+2025-05-06 16:59:35,019 - INFO - Total calculated mamount:87315.67408645363
+2025-05-06 16:59:35,020 - INFO - Unique clients: {'CCCTA', 'LAVTA'}
+2025-05-06 16:59:35,029 - INFO - Total amount for client LAVTA: 17338.692862825817
+2025-05-06 16:59:35,029 - INFO - Total calculated mamount:74223.82618523184
+2025-05-06 16:59:35,030 - INFO - Comparing operators between previous and latest sheets.
+2025-05-06 16:59:35,032 - INFO - Operator comparison completed.
+2025-05-06 16:59:35,032 - INFO - Comparing dates between previous and latest sheets.
+2025-05-06 16:59:35,033 - INFO - Date comparison completed.
+2025-05-06 16:59:35,034 - INFO - Checking for missing dates in the consecutive range.
+2025-05-06 16:59:35,037 - INFO - Missing date check completed.
+2025-05-06 16:59:35,037 - INFO - Comparing trips and hours data between previous and latest sheets.
+2025-05-06 16:59:35,040 - INFO - Trips and hours comparison completed.
+2025-05-06 16:59:35,040 - INFO - Comparing Deductions between previous and latest sheets.
+2025-05-06 16:59:35,043 - INFO - Deductions comparison completed.
+2025-05-06 16:59:35,043 - INFO - Comparing OS Operators between previous and latest sheets.
+2025-05-06 16:59:35,045 - INFO - OS Operator comparison completed.
+2025-05-06 16:59:35,094 - INFO - Applying formatting to sheet: Summary.
+2025-05-06 16:59:35,095 - INFO - Formatting applied successfully to sheet: Summary.
+2025-05-06 16:59:35,095 - INFO - Applying formatting to sheet: OperatorChanges.
+2025-05-06 16:59:35,096 - INFO - Formatting applied successfully to sheet: OperatorChanges.
+2025-05-06 16:59:35,096 - INFO - Applying formatting to sheet: TripsComparison.
+2025-05-06 16:59:35,099 - INFO - Formatting applied successfully to sheet: TripsComparison.
+2025-05-06 16:59:35,099 - INFO - Applying formatting to sheet: HoursComparison.
+2025-05-06 16:59:35,102 - INFO - Formatting applied successfully to sheet: HoursComparison.
+2025-05-06 16:59:35,102 - INFO - Applying formatting to sheet: LeaseComparison.
+2025-05-06 16:59:35,105 - INFO - Formatting applied successfully to sheet: LeaseComparison.
+2025-05-06 16:59:35,105 - INFO - Applying formatting to sheet: DatesComparison.
+2025-05-06 16:59:35,108 - INFO - Formatting applied successfully to sheet: DatesComparison.
+2025-05-06 16:59:35,108 - INFO - Applying formatting to sheet: MissingDates.
+2025-05-06 16:59:35,109 - INFO - Formatting applied successfully to sheet: MissingDates.
+2025-05-06 16:59:35,109 - INFO - Applying formatting to sheet: OSOperators.
+2025-05-06 16:59:35,110 - INFO - Formatting applied successfully to sheet: OSOperators.
+2025-05-06 16:59:35,141 - INFO - Main comparison process completed successfully. File saved to ComparedResults\Full_Comparison.xlsx.
+2025-05-06 16:59:37,142 - INFO - VDP_DIV5_0324_0406 FINAL.xlsm + VDP_DIV5_0407_0420 FINAL.xlsm
+2025-05-06 16:59:38,527 - INFO - Successfully updated color for TextBox 90 with status 'Decreased'.
+2025-05-06 16:59:38,541 - INFO - Successfully updated color for txtTripsDiff with value '-208'.
+2025-05-06 16:59:38,561 - INFO - Successfully updated color for txtHoursDiff with value '-213'.
+2025-05-06 16:59:38,576 - INFO - Successfully updated color for txtOpsDiff with value '0'.
+2025-05-06 16:59:38,581 - INFO - Successfully updated color for txtDaysDiff with value '0'.
+2025-05-06 16:59:38,599 - INFO - Successfully updated color for txtOSOPDiff with value '-1'.
+2025-05-06 16:59:38,667 - INFO - Successfully updated color for TextBox 90 with status 'Decreased'.
+2025-05-06 16:59:38,669 - INFO - Successfully updated color for txtTripsDiff with value '-122'.
+2025-05-06 16:59:38,671 - INFO - Successfully updated color for txtHoursDiff with value '-223'.
+2025-05-06 16:59:38,672 - INFO - Successfully updated color for txtOpsDiff with value '-1'.
+2025-05-06 16:59:38,673 - INFO - Successfully updated color for txtDaysDiff with value '0'.
+2025-05-06 16:59:38,740 - INFO - Successfully updated color for TextBox 90 with status 'Decreased'.
+2025-05-06 16:59:38,741 - INFO - Successfully updated color for txtTripsDiff with value '-86'.
+2025-05-06 16:59:38,743 - INFO - Successfully updated color for txtHoursDiff with value '10'.
+2025-05-06 16:59:38,744 - INFO - Successfully updated color for txtOpsDiff with value '6'.
+2025-05-06 16:59:38,745 - INFO - Successfully updated color for txtDaysDiff with value '0'.
+2025-05-06 16:59:39,878 - INFO - ComparedResults/Dashboard.xlsm has been successfully updated and saved.
+2025-05-06 16:59:42,907 - INFO - Deleted existing picture: TripsTable in Dashboard
+2025-05-06 16:59:42,910 - INFO - Deleted existing picture: HoursTable in Dashboard
+2025-05-06 16:59:42,913 - INFO - Deleted existing picture: OperatorTable in Dashboard
+2025-05-06 16:59:42,962 - INFO - Deleted existing picture: LeaseTable in Dashboard
+2025-05-06 16:59:43,004 - INFO - Deleted existing picture: DatesTable in Dashboard
+2025-05-06 16:59:43,028 - INFO - Deleted existing picture: OSOPTable in Dashboard
+2025-05-06 16:59:43,106 - INFO - Deleted existing picture: TripsTable in CCCTA
+2025-05-06 16:59:43,118 - INFO - Deleted existing picture: HoursTable in CCCTA
+2025-05-06 16:59:43,132 - INFO - Deleted existing picture: OperatorTable in CCCTA
+2025-05-06 16:59:43,143 - INFO - Deleted existing picture: LeaseTable in CCCTA
+2025-05-06 16:59:43,154 - INFO - Deleted existing picture: DatesTable in CCCTA
+2025-05-06 16:59:43,199 - INFO - Deleted existing picture: TripsTable in LAVTA
+2025-05-06 16:59:43,209 - INFO - Deleted existing picture: HoursTable in LAVTA
+2025-05-06 16:59:43,222 - INFO - Deleted existing picture: OperatorTable in LAVTA
+2025-05-06 16:59:43,229 - INFO - Deleted existing picture: LeaseTable in LAVTA
+2025-05-06 16:59:43,239 - INFO - Deleted existing picture: DatesTable in LAVTA
+2025-05-06 16:59:46,448 - INFO - Copied picture from TripsComparison, width: 11.85 cm, height: 9.00 cm
+2025-05-06 16:59:47,576 - INFO - Table Name: TripsTable
+2025-05-06 16:59:48,578 - INFO - 'TripsTable' successfully pasted in the TripsComparison Sheet.
+2025-05-06 16:59:48,603 - INFO - Resized TripsContainer to width: 11.96 cm, height: 10.97 cm
+2025-05-06 16:59:49,622 - INFO - Copied picture from HoursComparison, width: 12.04 cm, height: 9.00 cm
+2025-05-06 16:59:50,712 - INFO - Table Name: HoursTable
+2025-05-06 16:59:51,713 - INFO - 'HoursTable' successfully pasted in the HoursComparison Sheet.
+2025-05-06 16:59:51,731 - INFO - Resized HoursContainer to width: 12.14 cm, height: 10.97 cm
+2025-05-06 16:59:52,762 - INFO - Copied picture from OperatorChanges, width: 11.85 cm, height: 1.59 cm
+2025-05-06 16:59:53,852 - INFO - Table Name: OperatorTable
+2025-05-06 16:59:54,853 - INFO - 'OperatorTable' successfully pasted in the OperatorChanges Sheet.
+2025-05-06 16:59:54,874 - INFO - Resized OperatorContainer to width: 11.96 cm, height: 3.56 cm
+2025-05-06 16:59:55,892 - INFO - Copied picture from LeaseComparison, width: 11.85 cm, height: 9.53 cm
+2025-05-06 16:59:56,956 - INFO - Table Name: LeaseTable
+2025-05-06 16:59:57,957 - INFO - 'LeaseTable' successfully pasted in the LeaseComparison Sheet.
+2025-05-06 16:59:57,978 - INFO - Resized LeaseContainer to width: 11.96 cm, height: 11.50 cm
+2025-05-06 16:59:58,999 - INFO - Copied picture from MissingDates, width: 6.85 cm, height: 1.06 cm
+2025-05-06 17:00:00,075 - INFO - Table Name: DatesTable
+2025-05-06 17:00:01,077 - INFO - 'DatesTable' successfully pasted in the MissingDates Sheet.
+2025-05-06 17:00:01,100 - INFO - Resized DatesContainer to width: 6.96 cm, height: 3.03 cm
+2025-05-06 17:00:02,116 - INFO - Copied picture from OSOperators, width: 7.41 cm, height: 13.76 cm
+2025-05-06 17:00:03,191 - INFO - Table Name: OSOPTable
+2025-05-06 17:00:04,192 - INFO - 'OSOPTable' successfully pasted in the OSOperators Sheet.
+2025-05-06 17:00:04,210 - INFO - Resized OSOPContainer to width: 7.51 cm, height: 15.73 cm
+2025-05-06 17:00:05,446 - INFO - Copied picture from TripsComparison, width: 11.85 cm, height: 7.41 cm
+2025-05-06 17:00:06,560 - INFO - Table Name: TripsTable
+2025-05-06 17:00:07,562 - INFO - 'TripsTable' successfully pasted in the TripsComparison Sheet.
+2025-05-06 17:00:07,583 - INFO - Resized TripsContainer to width: 11.96 cm, height: 9.38 cm
+2025-05-06 17:00:08,608 - INFO - Copied picture from HoursComparison, width: 11.85 cm, height: 7.41 cm
+2025-05-06 17:00:09,676 - INFO - Table Name: HoursTable
+2025-05-06 17:00:10,678 - INFO - 'HoursTable' successfully pasted in the HoursComparison Sheet.
+2025-05-06 17:00:10,700 - INFO - Resized HoursContainer to width: 11.96 cm, height: 9.38 cm
+2025-05-06 17:00:11,723 - INFO - Copied picture from OperatorChanges, width: 12.22 cm, height: 2.12 cm
+2025-05-06 17:00:12,788 - INFO - Table Name: OperatorTable
+2025-05-06 17:00:13,790 - INFO - 'OperatorTable' successfully pasted in the OperatorChanges Sheet.
+2025-05-06 17:00:13,810 - INFO - Resized OperatorContainer to width: 12.33 cm, height: 4.09 cm
+2025-05-06 17:00:14,832 - INFO - Copied picture from LeaseComparison, width: 11.85 cm, height: 7.41 cm
+2025-05-06 17:00:15,910 - INFO - Table Name: LeaseTable
+2025-05-06 17:00:16,912 - INFO - 'LeaseTable' successfully pasted in the LeaseComparison Sheet.
+2025-05-06 17:00:16,931 - INFO - Resized LeaseContainer to width: 11.96 cm, height: 9.38 cm
+2025-05-06 17:00:17,951 - INFO - Copied picture from MissingDates, width: 6.85 cm, height: 1.06 cm
+2025-05-06 17:00:19,020 - INFO - Table Name: DatesTable
+2025-05-06 17:00:20,022 - INFO - 'DatesTable' successfully pasted in the MissingDates Sheet.
+2025-05-06 17:00:20,040 - INFO - Resized DatesContainer to width: 6.96 cm, height: 3.03 cm
+2025-05-06 17:00:21,275 - INFO - Copied picture from TripsComparison, width: 11.85 cm, height: 7.94 cm
+2025-05-06 17:00:22,394 - INFO - Table Name: TripsTable
+2025-05-06 17:00:23,395 - INFO - 'TripsTable' successfully pasted in the TripsComparison Sheet.
+2025-05-06 17:00:23,414 - INFO - Resized TripsContainer to width: 11.96 cm, height: 9.91 cm
+2025-05-06 17:00:24,436 - INFO - Copied picture from HoursComparison, width: 11.85 cm, height: 7.94 cm
+2025-05-06 17:00:25,518 - INFO - Table Name: HoursTable
+2025-05-06 17:00:26,519 - INFO - 'HoursTable' successfully pasted in the HoursComparison Sheet.
+2025-05-06 17:00:26,539 - INFO - Resized HoursContainer to width: 11.96 cm, height: 9.91 cm
+2025-05-06 17:00:27,559 - INFO - Copied picture from OperatorChanges, width: 12.41 cm, height: 6.88 cm
+2025-05-06 17:00:28,634 - INFO - Table Name: OperatorTable
+2025-05-06 17:00:29,636 - INFO - 'OperatorTable' successfully pasted in the OperatorChanges Sheet.
+2025-05-06 17:00:29,656 - INFO - Resized OperatorContainer to width: 12.51 cm, height: 8.85 cm
+2025-05-06 17:00:30,679 - INFO - Copied picture from LeaseComparison, width: 11.85 cm, height: 3.70 cm
+2025-05-06 17:00:31,759 - INFO - Table Name: LeaseTable
+2025-05-06 17:00:32,761 - INFO - 'LeaseTable' successfully pasted in the LeaseComparison Sheet.
+2025-05-06 17:00:32,784 - INFO - Resized LeaseContainer to width: 11.96 cm, height: 5.68 cm
+2025-05-06 17:00:33,808 - INFO - Copied picture from MissingDates, width: 6.85 cm, height: 1.06 cm
+2025-05-06 17:00:34,887 - INFO - Table Name: DatesTable
+2025-05-06 17:00:35,888 - INFO - 'DatesTable' successfully pasted in the MissingDates Sheet.
+2025-05-06 17:00:35,910 - INFO - Resized DatesContainer to width: 6.96 cm, height: 3.03 cm
+2025-05-06 17:00:37,091 - INFO - Data pasted as pictures successfully.

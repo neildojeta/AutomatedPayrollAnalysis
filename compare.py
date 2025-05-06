@@ -99,7 +99,7 @@ def calculate_totals(hours_sheet, pr_sheet):
 
                 if not partner_rows_matched.empty:
                     # Add the amount found in column 14 (assuming it's the amount column)
-                    total_amount += partner_rows_matched.iloc[0, 14]  # Column 14 contains the amount
+                    total_amount += partner_rows_matched.iloc[0, 15]  # Column 14 contains the amount
                     # logger.info(f"Amount for partner {partner}: {partner_rows_matched.iloc[0, 14]}")
             calculated_totals += total_amount
         logger.info(f"Total amount for client {client}: {total_amount}")
@@ -182,8 +182,8 @@ def calculate_client_totals(hours_sheet, pr_sheet, client):
 
             if not partner_rows_matched.empty:
                 # Add the amount found in column 14 (assuming it's the amount column)
-                total_amount += partner_rows_matched.iloc[0, 14]  # Column 14 contains the amount
-                logger.info(f"Amount for partner {partner}: {partner_rows_matched.iloc[0, 14]}")
+                total_amount += partner_rows_matched.iloc[0, 15]  # Column 14 contains the amount
+                logger.info(f"Amount for partner {partner}: {partner_rows_matched.iloc[0, 15]}")
         calculated_amount.append(total_amount)
         logger.info(f"Total amount for client {client}: {total_amount}")
 
